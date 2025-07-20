@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+
+  <Import Project=".submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.ProjectReferenceAsPackageReference\build\Package.targets" />
+
+</Project>

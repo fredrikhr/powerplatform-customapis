@@ -1,0 +1,4 @@
+[submodule "github.com/fredrikhr/powerplatform-sdk-extensions"]
+	path = .submodules/fredrikhr/powerplatform-sdk-extensions
+	url = https://github.com/fredrikhr/powerplatform-sdk-extensions.git
+	branch = main

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <GlobalPackageReference Include="Microsoft.SourceLink.GitHub">
+      <Version>8.0.0</Version>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="PolySharp">
+      <Version>1.15.0</Version>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="FredrikHr.NupkgMSBuild.GitHubPackageProjectUrlInference">
+      <ProjectReference>$(MSBuildThisFileDirectory).submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.GitHubPackageProjectUrlInference\FredrikHr.NupkgMSBuild.GitHubPackageProjectUrlInference.csproj</ProjectReference>
+      <Version>1.0.0</Version>
+    </GlobalPackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="FredrikHr.NupkgMSBuild.PackageAuthorSigning">
+      <Version>1.0.0</Version>
+    </PackageVersion>
+    <PackageVersion Include="FredrikHr.NupkgMSBuild.PackPackageReference">
+      <Version>1.0.0</Version>
+    </PackageVersion>
+    <PackageVersion Include="FredrikHr.NupkgMSBuild.StripNuspecTfm">
+      <Version>1.0.0</Version>
+    </PackageVersion>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage">
+      <Version>1.43.6</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.CrmSdk.CoreAssemblies">
+      <Version>9.0.2.59</Version>
+    </PackageVersion>
+  </ItemGroup>
+</Project>

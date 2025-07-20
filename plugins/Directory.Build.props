@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+
+  <!-- Import Directory.Build file from parent directory -->
+  <PropertyGroup>
+    <MSBuildAllProjects>
+      $(MSBuildAllProjects);$(MSBuildThisFileDirectory)..\$(MSBuildThisFileName)$(MSBuildThisFileExtension)</MSBuildAllProjects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage">
+      <PrivateAssets>all</PrivateAssets>
+      <ProjectReference>$(MSBuildThisFileDirectory)..\.submodules\fredrikhr\powerplatform-sdk-extensions\build\FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage\FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage.csproj</ProjectReference>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.Xrm.Sdk" />
+    <Using Include="Microsoft.Xrm.Sdk.Extensions" />
+  </ItemGroup>
+
+</Project>

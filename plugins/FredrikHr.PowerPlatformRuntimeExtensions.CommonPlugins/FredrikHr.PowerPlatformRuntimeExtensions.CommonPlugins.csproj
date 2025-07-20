@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Xrm.Kernel.Contracts.Internal, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\..\bld\dataversesandboxworker\Microsoft.Xrm.Kernel.Contracts.Internal.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

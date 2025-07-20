@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.slnx": "xml",
+    "*.tasks": "xml"
+  },
+  "dotnet.defaultSolution": "PowerPlatform Custom APIs.slnx",
+  "dotnet.testWindow.useTestingPlatformProtocol": true
+}

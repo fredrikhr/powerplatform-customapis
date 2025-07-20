@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://json.schemastore.org/dependabot-2.0.json
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directories: ["/"]
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 50
+  - package-ecosystem: gitsubmodule
+    directories: ["/"]
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 50

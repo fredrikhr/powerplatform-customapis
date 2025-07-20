@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+
+  <PropertyGroup>
+    <Authors>Fredrik Høisæther Rasch</Authors>
+    <Company>$(Authors)</Company>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Copyright>© $(Company), $([System.DateTime]::Now.Year)</Copyright>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Label="BasePath">
+    <BaseOutputPath>$(MSBuildThisFileDirectory)bin\$(MSBuildProjectName)\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <!-- <PublishDir>$(MSBuildThisFileDirectory)publish\$(MSBuildProjectName)\</PublishDir> -->
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <RestoreAdditionalProjectFallbackFolders Condition="Exists('$(MSBuildThisFileDirectory)packages')">
+      $(MSBuildThisFileDirectory)packages;
+    </RestoreAdditionalProjectFallbackFolders>
+    <RestoreAdditionalProjectFallbackFolders Condition="Exists('$(MSBuildThisFileDirectory).submodules\fredrikhr\powerplatform-sdk-extensions\packages')">
+      $(RestoreAdditionalProjectFallbackFolders);
+      $(MSBuildThisFileDirectory).submodules\fredrikhr\powerplatform-sdk-extensions\packages
+    </RestoreAdditionalProjectFallbackFolders>
+    <RestoreAdditionalProjectFallbackFolders Condition="Exists('$(MSBuildThisFileDirectory).submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\packages')">
+      $(RestoreAdditionalProjectFallbackFolders);
+      $(MSBuildThisFileDirectory).submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\packages
+    </RestoreAdditionalProjectFallbackFolders>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LangVersion>13</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Label="LICENSE">
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+  <ItemGroup Label="LICENSE">
+    <None Include="$(MSBuildThisFileDirectory)LICENSE" Pack="true">
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

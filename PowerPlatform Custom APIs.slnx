@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/..root/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path=".gitmodules" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="LICENSE" />
+  </Folder>
+  <Folder Name="/.config/">
+    <File Path=".config/dotnet-tools.json" />
+  </Folder>
+  <Folder Name="/.github/">
+    <File Path=".github/dependabot.yml" />
+  </Folder>
+  <Folder Name="/plugins/">
+    <Project Path="plugins/FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins/FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins.csproj" />
+  </Folder>
+</Solution>
