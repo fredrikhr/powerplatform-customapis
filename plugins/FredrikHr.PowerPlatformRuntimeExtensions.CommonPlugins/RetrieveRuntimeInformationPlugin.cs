@@ -117,6 +117,7 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
             Uri instanceUri = new(instanceUrl);
             Uri odataUri = new(instanceUri, $"/api/data/v{version}/");
             e["ODataApi"] = odataUri.ToString();
+            e["ODataMetadata"] = new Uri(odataUri, "$metadata").ToString();
             e["TokenAudience"] = instanceUri.GetLeftPart(UriPartial.Authority);
         }
     }
