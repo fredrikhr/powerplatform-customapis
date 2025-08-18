@@ -1,4 +1,5 @@
 ﻿using Microsoft.Crm.Sdk.Messages;
+using Microsoft.PowerApps.CoreFramework.PowerPlatform.Api;
 using Microsoft.Xrm.Sdk.Organization;
 
 namespace FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins;
@@ -11,6 +12,7 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         public const string WhoAmIDetails = nameof(WhoAmIDetails);
         public const string OrganizationDetails = nameof(OrganizationDetails);
         public const string Endpoints = nameof(OrganizationDetail.Endpoints);
+        public const string ApiDiscovery = nameof(ApiDiscovery);
     }
 
     public void Execute(IServiceProvider serviceProvider)
@@ -27,6 +29,8 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         outputs[OutputParameterNames.OrganizationDetails] =
             GetOrganizationDetails(orgService, out Entity endpointsEntity);
         outputs[OutputParameterNames.Endpoints] = endpointsEntity;
+        outputs[OutputParameterNames.ApiDiscovery] =
+            GetApiDiscovery(context, clusterCategoryName);
     }
 
     private static Entity GetEnvironmentInfo(IServiceProvider serviceProvider, out string? clusterCategory)
@@ -115,5 +119,23 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
             e["ODataApi"] = odataUri.ToString();
             e["TokenAudience"] = instanceUri.GetLeftPart(UriPartial.Authority);
         }
+    }
+
+    private static Entity GetApiDiscovery(
+        IPluginExecutionContext7 context,
+        string? clusterCategoryName
+        )
+    {
+        Entity entity = new();
+        var apiDiscovery = PowerPlatformApiDiscovery
+            .FromClusterCategoryName(clusterCategoryName);
+        entity[nameof(apiDiscovery.TokenAudience)] = apiDiscovery.TokenAudience;
+        entity[nameof(apiDiscovery.GlobalEndpoint)] = apiDiscovery.GlobalEndpoint;
+        entity[nameof(apiDiscovery.GlobalUserContentEndpoint)] = apiDiscovery.GlobalUserContentEndpoint;
+        entity["TenantEndpoint"] = apiDiscovery.GetTenantEndpoint(context.TenantId);
+        entity["OrganizationEndpoint"] = apiDiscovery.GetOrganizationEndpoint(context.OrganizationId);
+        entity["EnvironmentEndpoint"] = apiDiscovery.GetEnvironmentEndpoint(context.EnvironmentId);
+        entity["EnvironmentUserContentEndpoint"] = apiDiscovery.GetEnvironmentUserContentEndpoint(context.EnvironmentId);
+        return entity;
     }
 }
