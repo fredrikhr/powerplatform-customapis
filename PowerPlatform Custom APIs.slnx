@@ -14,6 +14,11 @@
     <File Path=".github/dependabot.yml" />
   </Folder>
   <Folder Name="/plugins/">
+    <File Path="plugins/Directory.Build.props" />
     <Project Path="plugins/FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins/FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins.csproj" />
+  </Folder>
+  <Folder Name="/solutions/">
+    <File Path="solutions/Directory.Build.props" />
+    <Project Path="solutions/PowerPlatformRuntimeExtensions/PowerPlatformRuntimeExtensions.cdsproj" Type="C#" />
   </Folder>
 </Solution>

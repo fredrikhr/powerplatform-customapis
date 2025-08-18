@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+
+  <!-- Import Directory.Build file from parent directory -->
+  <PropertyGroup>
+    <MSBuildAllProjects>
+      $(MSBuildAllProjects);$(MSBuildThisFileDirectory)..\$(MSBuildThisFileName)$(MSBuildThisFileExtension)</MSBuildAllProjects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
+
+  <PropertyGroup>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFramework>net471</TargetFramework>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <SolutionRootPath>src</SolutionRootPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution">
+      <PrivateAssets>all</PrivateAssets>
+      <ProjectReference>$(MSBuildThisFileDirectory)..\.submodules\fredrikhr\powerplatform-sdk-extensions\build\FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution\FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution.csproj</ProjectReference>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

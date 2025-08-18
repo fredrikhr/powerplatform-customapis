@@ -1,0 +1,173 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // solutions/PowerPlatformRuntimeExtensions
+    {
+      "label": "PowerPlatformRuntimeExtensions | Build solution (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Debug",
+        "solutions/PowerPlatformRuntimeExtensions"
+      ],
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformRuntimeExtensions | Push to Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--path",
+        "bin/PowerPlatformRuntimeExtensions/Debug/PowerPlatformRuntimeExtensions.zip"
+      ],
+      "dependsOn": ["PowerPlatformRuntimeExtensions | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformRuntimeExtensions | Push and publish to Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--publish-changes",
+        "--path",
+        "bin/PowerPlatformRuntimeExtensions/Debug/PowerPlatformRuntimeExtensions.zip"
+      ],
+      "dependsOn": ["PowerPlatformRuntimeExtensions | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformRuntimeExtensions | Pull from Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "sync",
+        "--async",
+        "--packagetype",
+        "Unmanaged",
+        "--solution-folder",
+        "solutions/PowerPlatformRuntimeExtensions/src"
+      ],
+      "dependsOn": [],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformRuntimeExtensions | Build solution (Managed)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Release",
+        "solutions/PowerPlatformRuntimeExtensions"
+      ],
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformRuntimeExtensions | Push to Power Platform (Managed)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--convert-to-managed",
+        "--publish-changes",
+        "--path",
+        "bin/PowerPlatformRuntimeExtensions/Release/PowerPlatformRuntimeExtensions.zip"
+      ],
+      "dependsOn": ["PowerPlatformRuntimeExtensions | Build solution (Managed)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+
+    // Repository solution tasks
+    {
+      "type": "dotnet",
+      "task": "build",
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "label": "Build Solution"
+    },
+    {
+      "type": "dotnet",
+      "task": "clean",
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "label": "Clean Solution"
+    }
+  ]
+}

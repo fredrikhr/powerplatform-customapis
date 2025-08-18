@@ -1,0 +1,9 @@
+<pluginpackage uniquename="pwrplatf_RuntimeExtensionCommonPlugins">
+  <exportkeyversion>1</exportkeyversion>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_RuntimeExtensionCommonPlugins</name>
+  <package mimetype="application/octet-stream">pwrplatf_RuntimeExtensionCommonPlugins.nupkg</package>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <version>1.0.0</version>
+</pluginpackage>

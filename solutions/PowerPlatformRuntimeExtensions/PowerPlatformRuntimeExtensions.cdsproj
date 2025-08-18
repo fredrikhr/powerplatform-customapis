@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.Build.NoTargets/3.7.56">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\plugins\FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins\FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins.csproj" />
+  </ItemGroup>
+
+</Project>
