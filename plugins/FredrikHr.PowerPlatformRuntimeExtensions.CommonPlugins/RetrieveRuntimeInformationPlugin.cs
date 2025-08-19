@@ -43,7 +43,7 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
 
         static void WriteToEntity(Entity e, IEnvironmentService envInfo)
         {
-            e[nameof(envInfo.AzureAuthorityHost)] = envInfo.AzureAuthorityHost;
+            e[nameof(envInfo.AzureAuthorityHost)] = envInfo.AzureAuthorityHost?.ToString();
             e[nameof(envInfo.AzureRegionName)] = envInfo.AzureRegionName;
             e[nameof(envInfo.Geo)] = envInfo.Geo;
         }
