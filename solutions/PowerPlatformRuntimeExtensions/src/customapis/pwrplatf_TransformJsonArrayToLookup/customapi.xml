@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_TransformJsonArrayToLookup">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Transforms a JSON array to a lookup object using the specified key property for each element in the array">
+    <label description="Transforms a JSON array to a lookup object using the specified key property for each element in the array" languagecode="1033" />
+  </description>
+  <displayname default="Transform JSON Array to Lookup">
+    <label description="Transform JSON Array to Lookup" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Transform JSON Array to Lookup</name>
+  <plugintypeid>
+    <plugintypeexportkey>3E3F2F767A33E66101EFA36BF5CA026ED07DB0DC12183F39768E0E9A96E32E08</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="JsonString">
+  <description default="A stringified JSON object containing the result of the transformation">
+    <label description="A stringified JSON object containing the result of the transformation" languagecode="1033" />
+  </description>
+  <displayname default="JSON Lookup">
+    <label description="JSON Lookup" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_TransformJsonArrayToLookup-Out-JsonString</name>
+  <type>10</type>
+</customapiresponseproperty>

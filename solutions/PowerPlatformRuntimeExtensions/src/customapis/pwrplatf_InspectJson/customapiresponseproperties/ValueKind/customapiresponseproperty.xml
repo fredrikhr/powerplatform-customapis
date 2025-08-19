@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="ValueKind">
+  <description default="The type of JSON value at the root element of the parsed JSON document">
+    <label description="The type of JSON value at the root element of the parsed JSON document" languagecode="1033" />
+  </description>
+  <displayname default="Value Kind">
+    <label description="Value Kind" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_InspectJson-Out-ValueKind</name>
+  <type>10</type>
+</customapiresponseproperty>

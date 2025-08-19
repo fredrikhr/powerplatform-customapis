@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="CommentHandling">
+  <description default="Determines how the JSON document handles comments">
+    <label description="Determines how the JSON document handles comments" languagecode="1033" />
+  </description>
+  <displayname default="Comment Handling">
+    <label description="Comment Handling" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>pwrplatf_InspectJson-In-CommentHandling</name>
+  <type>10</type>
+</customapirequestparameter>
