@@ -78,7 +78,10 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         e["InitiatingUserEntraObjectId"] = context.InitiatingUserAzureActiveDirectoryObjectId;
         e[nameof(context.IsApplicationUser)] = context.IsApplicationUser;
         e[nameof(context.IsPortalsClientCall)] = context.IsPortalsClientCall;
+if (context.PortalsContactId != Guid.Empty)
+        {
         e[nameof(context.PortalsContactId)] = context.PortalsContactId;
+}
         return e;
     }
 
