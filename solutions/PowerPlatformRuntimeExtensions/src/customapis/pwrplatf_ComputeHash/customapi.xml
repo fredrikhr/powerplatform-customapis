@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_ComputeHash">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Computes the cryptographic Hash digest of the specified payload using the specified Hash algorithm.">
+    <label description="Computes the cryptographic Hash digest of the specified payload using the specified Hash algorithm." languagecode="1033" />
+  </description>
+  <displayname default="Compute Hash">
+    <label description="Compute Hash" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Compute Hash</name>
+  <plugintypeid>
+    <plugintypeexportkey>CD9462D7F80A3003A678470EB2D31102EFBDFDD00E9692E7F06D028255DEE683</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>
