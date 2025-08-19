@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_RetrieveRuntimeInformation">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Retrieves information related to the current Power Platform Runtime and the Dataverse instance">
+    <label description="Retrieves information related to the current Power Platform Runtime and the Dataverse instance" languagecode="1033" />
+  </description>
+  <displayname default="Retrieve Power Platform Runtime Information">
+    <label description="Retrieve Power Platform Runtime Information" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Retrieve Power Platform Runtime Information</name>
+  <plugintypeid>
+    <plugintypeexportkey>40B32FEEBD808CB592BC98C0A51AB7768BAFA7EFDEEC5A4CFA09E7B6844D6391</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

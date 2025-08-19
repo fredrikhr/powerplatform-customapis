@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="EnvironmentInfo">
+  <description default="Azure environment information for the executing Dataverse instance.">
+    <label description="Azure environment information for the executing Dataverse instance." languagecode="1033" />
+  </description>
+  <displayname default="Environment Information">
+    <label description="Environment Information" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_GetRuntimeInformation-Out-EnvironmentInfo</name>
+  <type>3</type>
+</customapiresponseproperty>

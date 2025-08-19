@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="OrganizationDetails">
+  <description default="Dataverse instance details.">
+    <label description="Dataverse instance details." languagecode="1033" />
+  </description>
+  <displayname default="Organization Details">
+    <label description="Organization Details" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_RetrieveRuntimeInformation-Out-OrganizationDetails</name>
+  <type>3</type>
+</customapiresponseproperty>

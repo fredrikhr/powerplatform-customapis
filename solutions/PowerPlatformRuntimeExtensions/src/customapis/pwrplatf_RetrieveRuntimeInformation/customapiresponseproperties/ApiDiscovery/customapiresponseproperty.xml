@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="ApiDiscovery">
+  <description default="Power Platform API Discovery information.">
+    <label description="Power Platform API Discovery information." languagecode="1033" />
+  </description>
+  <displayname default="Power Platform API Discovery">
+    <label description="Power Platform API Discovery" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_RetrieveRuntimeInformation-Out-ApiDiscovery</name>
+  <type>3</type>
+</customapiresponseproperty>
