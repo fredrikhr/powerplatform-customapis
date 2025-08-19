@@ -5,10 +5,11 @@
     <PackageId>pwrplatf_RuntimeExtensionCommonPlugins</PackageId>
     <Version>1.0.0</Version>
     <Description>No description provided.</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="CoreFramework.CapCoreServices.TopologyModel, Version=6.21.0.27, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+    <Reference Include="CoreFramework.CapCoreServices.TopologyModel, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\..\bld\dataversesandboxworker\CoreFramework.CapCoreServices.TopologyModel.dll</HintPath>
       <Private>true</Private>
     </Reference>

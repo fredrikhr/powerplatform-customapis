@@ -1,4 +1,6 @@
-﻿using Microsoft.Crm.Sdk.Messages;
+﻿using System.Reflection;
+
+using Microsoft.Crm.Sdk.Messages;
 using Microsoft.PowerApps.CoreFramework.PowerPlatform.Api;
 using Microsoft.Xrm.Sdk.Organization;
 
@@ -15,11 +17,80 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         public const string ApiDiscovery = nameof(ApiDiscovery);
     }
 
+    private static readonly HashSet<string> KnownAssemblyNames = new([
+        "CoreFramework.CapCoreServices.TopologyModel"
+    ], StringComparer.OrdinalIgnoreCase);
+
+    private ITracingService? _trace;
+
+    public RetrieveRuntimeInformationPlugin()
+    {
+        AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
+        {
+            if (string.IsNullOrEmpty(args.Name)) return null;
+            Assembly? loadedAssembly;
+            try
+            {
+                AssemblyName name = new(args.Name);
+                if (!KnownAssemblyNames.Contains(name.Name)) return null;
+
+                string filename = $"{name.Name}.dll";
+                string filepath = Path.Combine(Environment.CurrentDirectory, filename);
+                if (File.Exists(filepath))
+                {
+                    loadedAssembly = Assembly.LoadFile(filepath);
+                    TraceAssemblyLoading(name, loadedAssembly, _trace);
+                    return loadedAssembly;
+                }
+
+                string cultureDirectory = System.Globalization.CultureInfo.CurrentCulture.Name;
+                filepath = Path.Combine(Environment.CurrentDirectory, cultureDirectory, filename);
+                if (File.Exists(filepath))
+                {
+                    loadedAssembly = Assembly.LoadFile(filepath);
+                    TraceAssemblyLoading(name, loadedAssembly, _trace);
+                    return loadedAssembly;
+                }
+
+                cultureDirectory = "en-US";
+                filepath = Path.Combine(Environment.CurrentDirectory, cultureDirectory, filename);
+                if (File.Exists(filepath))
+                {
+                    loadedAssembly = Assembly.LoadFile(filepath);
+                    TraceAssemblyLoading(name, loadedAssembly, _trace);
+                    return loadedAssembly;
+                }
+            }
+#pragma warning disable CA1031 // Do not catch general exception types
+            catch (Exception) { return null; }
+#pragma warning restore CA1031 // Do not catch general exception types
+
+            return null;
+        };
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Design",
+            "CA1031: Do not catch general exception types",
+            Justification = nameof(ITracingService)
+        )]
+        static void TraceAssemblyLoading(AssemblyName requestedName, Assembly? loadedAssembly, ITracingService? trace)
+        {
+            try
+            {
+                trace?.Trace("Resolving known assembly name '{0}' -> Loaded assembly '{1}'.", requestedName, loadedAssembly?.GetName());
+            }
+            catch (Exception)
+            {
+                // Do not do anything here on purpose.
+            }
+        }
+    }
+
     public void Execute(IServiceProvider serviceProvider)
     {
         var context = serviceProvider.Get<IPluginExecutionContext7>();
         ParameterCollection outputs = context.OutputParameters;
-        var trace = serviceProvider.Get<ITracingService>();
+        _trace = serviceProvider.Get<ITracingService>();
         var orgService = serviceProvider.GetOrganizationService(context.UserId);
 
         outputs[OutputParameterNames.EnvironmentInfo] =
@@ -78,10 +149,10 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         e["InitiatingUserEntraObjectId"] = context.InitiatingUserAzureActiveDirectoryObjectId;
         e[nameof(context.IsApplicationUser)] = context.IsApplicationUser;
         e[nameof(context.IsPortalsClientCall)] = context.IsPortalsClientCall;
-if (context.PortalsContactId != Guid.Empty)
+        if (context.PortalsContactId != Guid.Empty)
         {
-        e[nameof(context.PortalsContactId)] = context.PortalsContactId;
-}
+            e[nameof(context.PortalsContactId)] = context.PortalsContactId;
+        }
         return e;
     }
 
