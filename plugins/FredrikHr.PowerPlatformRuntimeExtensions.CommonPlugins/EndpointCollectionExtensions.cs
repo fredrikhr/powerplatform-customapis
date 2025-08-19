@@ -4,21 +4,27 @@ namespace FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins;
 
 internal static class EndpointCollectionExtensions
 {
-    public static Entity ToEntity(this EndpointCollection endpoints, out string instanceUrl)
+    public static Entity ToEntity(this EndpointCollection endpoints, out string instanceUrl, out Uri? instanceApiUri)
     {
         Entity e = new();
         string? localInstanceUrl = null;
+        Uri? localInstanceApiUri = null;
         foreach ((EndpointType type, string endpoint) in endpoints)
         {
             if (type is EndpointType.WebApplication)
             {
-                localInstanceUrl = endpoint;
+                localInstanceUrl = new Uri(endpoint).GetLeftPart(UriPartial.Authority);
+            }
+            if (type is EndpointType.OrganizationDataService)
+            {
+                localInstanceApiUri = new(new Uri(endpoint), "/");
             }
             e[type.ToString()] = endpoint;
         }
         instanceUrl = localInstanceUrl
             ?? FallbackInstanceUrl(endpoints, EndpointType.OrganizationService)
             ?? FallbackInstanceUrl(endpoints, EndpointType.OrganizationDataService)!;
+        instanceApiUri = localInstanceApiUri;
         return e;
 
         static string? FallbackInstanceUrl(EndpointCollection endpoints, EndpointType type)

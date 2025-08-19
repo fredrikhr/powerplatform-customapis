@@ -102,8 +102,8 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         e[nameof(detail.TenantId)] = detail.TenantId;
         e[nameof(detail.UrlName)] = detail.UrlName;
         e[nameof(detail.UniqueName)] = detail.UniqueName;
-        endpointsEntity = detail.Endpoints.ToEntity(out string instanceUrl);
-        ExtendEndpointEntity(endpointsEntity, instanceUrl, detail.OrganizationVersion);
+        endpointsEntity = detail.Endpoints.ToEntity(out string instanceUrl, out Uri? instanceApiUri);
+        ExtendEndpointEntity(endpointsEntity, instanceUrl, instanceApiUri, detail.OrganizationVersion);
         e[nameof(OrganizationState)] = detail.State.ToString();
         e[$"{nameof(OrganizationState)}Value"] = (int)detail.State;
         e[nameof(detail.SchemaType)] = detail.SchemaType;
@@ -111,14 +111,14 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         e[$"{nameof(detail.OrganizationType)}Value"] = (int)detail.OrganizationType;
         return e;
 
-        static void ExtendEndpointEntity(Entity e, string instanceUrl, string version)
+        static void ExtendEndpointEntity(Entity e, string instanceUrl, Uri? instanceApiUri, string version)
         {
             if (string.IsNullOrEmpty(version)) version = "9.2";
-            Uri instanceUri = new(instanceUrl);
-            Uri odataUri = new(instanceUri, $"/api/data/v{version}/");
+            instanceApiUri ??= new(instanceUrl);
+            Uri odataUri = new(instanceApiUri, $"/api/data/v{version}/");
             e["ODataApi"] = odataUri.ToString();
             e["ODataMetadata"] = new Uri(odataUri, "$metadata").ToString();
-            e["TokenAudience"] = instanceUri.GetLeftPart(UriPartial.Authority);
+            e["TokenAudience"] = instanceUrl;
         }
     }
 
