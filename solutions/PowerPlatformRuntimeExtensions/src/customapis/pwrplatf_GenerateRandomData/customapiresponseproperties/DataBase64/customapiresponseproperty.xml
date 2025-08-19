@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="DataBase64">
+  <description default="Generated random data as a Base64-encoded string">
+    <label description="Generated random data as a Base64-encoded string" languagecode="1033" />
+  </description>
+  <displayname default="Data">
+    <label description="Data" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_GenerateRandomData-Out-DataBase64</name>
+  <type>10</type>
+</customapiresponseproperty>

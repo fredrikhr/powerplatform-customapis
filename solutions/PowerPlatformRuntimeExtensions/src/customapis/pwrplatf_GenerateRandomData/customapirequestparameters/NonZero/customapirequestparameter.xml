@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="NonZero">
+  <description default="Whether to exclude zero-values bytes when generating random data.">
+    <label description="Whether to exclude zero-values bytes when generating random data." languagecode="1033" />
+  </description>
+  <displayname default="Non Zero">
+    <label description="Non Zero" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>pwrplatf_GenerateRandomData-In-NonZero</name>
+  <type>0</type>
+</customapirequestparameter>

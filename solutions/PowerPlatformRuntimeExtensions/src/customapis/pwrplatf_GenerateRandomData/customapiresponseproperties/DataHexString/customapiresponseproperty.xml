@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="DataHexString">
+  <description default="Generated random data encoded as a string of hexadecimal digits.">
+    <label description="Generated random data encoded as a string of hexadecimal digits." languagecode="1033" />
+  </description>
+  <displayname default="Random Hex-String">
+    <label description="Random Hex-String" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_GenerateRandomData-Out-DataHexString</name>
+  <type>10</type>
+</customapiresponseproperty>
