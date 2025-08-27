@@ -137,7 +137,6 @@
         "solution",
         "import",
         "--async",
-        "--convert-to-managed",
         "--publish-changes",
         "--path",
         "bin/PowerPlatformRuntimeExtensions/Release/PowerPlatformRuntimeExtensions.zip"
@@ -290,7 +289,6 @@
         "solution",
         "import",
         "--async",
-        "--convert-to-managed",
         "--publish-changes",
         "--path",
         "bin/PowerPlatformSolutionManagementExtensions/Release/PowerPlatformSolutionManagementExtensions.zip"
