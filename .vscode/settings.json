@@ -4,5 +4,11 @@
     "*.tasks": "xml"
   },
   "dotnet.defaultSolution": "PowerPlatform Custom APIs.slnx",
-  "dotnet.testWindow.useTestingPlatformProtocol": true
+  "dotnet.testWindow.useTestingPlatformProtocol": true,
+  "json.schemas": [
+    {
+      "fileMatch": ["Workflows/*.json"],
+      "url": "./.submodules/fredrikhr/powerplatform-sdk-extensions/schemas/modernflow-json/workflow-clientdata.json"
+    }
+  ]
 }
