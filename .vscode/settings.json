@@ -3,7 +3,7 @@
     "*.slnx": "xml",
     "*.tasks": "xml"
   },
-  "dotnet.defaultSolution": "PowerPlatform Custom APIs.slnx",
+  "dotnet.defaultSolution": "PowerPlatform Extras.slnx",
   "dotnet.testWindow.useTestingPlatformProtocol": true,
   "json.schemas": [
     {
