@@ -15,6 +15,7 @@
   "paths": {
     "/absolute-redirect/{n}": {
       "get": {
+        "operationId": "getAbsoluteRedirectN",
         "parameters": [
           {
             "in": "path",
@@ -39,6 +40,7 @@
     },
     "/anything": {
       "delete": {
+        "operationId": "deleteAnything",
         "produces": [
           "application/json"
         ],
@@ -53,6 +55,7 @@
         ]
       },
       "get": {
+        "operationId": "getAnything",
         "produces": [
           "application/json"
         ],
@@ -67,6 +70,7 @@
         ]
       },
       "patch": {
+        "operationId": "patchAnything",
         "produces": [
           "application/json"
         ],
@@ -81,6 +85,7 @@
         ]
       },
       "post": {
+        "operationId": "postAnything",
         "produces": [
           "application/json"
         ],
@@ -95,6 +100,7 @@
         ]
       },
       "put": {
+        "operationId": "putAnything",
         "produces": [
           "application/json"
         ],
@@ -111,6 +117,7 @@
     },
     "/anything/{anything}": {
       "delete": {
+        "operationId": "deleteAnythingByPath",
         "produces": [
           "application/json"
         ],
@@ -133,6 +140,7 @@
         ]
       },
       "get": {
+        "operationId": "getAnythingByPath",
         "produces": [
           "application/json"
         ],
@@ -155,6 +163,7 @@
         ]
       },
       "patch": {
+        "operationId": "patchAnythingByPath",
         "produces": [
           "application/json"
         ],
@@ -177,6 +186,7 @@
         ]
       },
       "post": {
+        "operationId": "postAnythingByPath",
         "produces": [
           "application/json"
         ],
@@ -199,6 +209,7 @@
         ]
       },
       "put": {
+        "operationId": "putAnythingByPath",
         "produces": [
           "application/json"
         ],
@@ -223,6 +234,7 @@
     },
     "/base64/{value}": {
       "get": {
+        "operationId": "getBase64DecodedValue",
         "parameters": [
           {
             "default": "SFRUUEJJTiBpcyBhd2Vzb21l",
@@ -248,6 +260,7 @@
     },
     "/basic-auth/{user}/{passwd}": {
       "get": {
+        "operationId": "getBasicAuthenticated",
         "parameters": [
           {
             "in": "path",
@@ -281,6 +294,7 @@
     },
     "/bearer": {
       "get": {
+        "operationId": "getBearerAuthenticated",
         "parameters": [
           {
             "in": "header",
@@ -307,6 +321,7 @@
     },
     "/brotli": {
       "get": {
+        "operationId": "getBrotlyEncodedData",
         "produces": [
           "application/json"
         ],
@@ -323,6 +338,7 @@
     },
     "/bytes/{n}": {
       "get": {
+        "operationId": "getRandomBytes",
         "parameters": [
           {
             "in": "path",
@@ -347,6 +363,7 @@
     },
     "/cache": {
       "get": {
+        "operationId": "getCachedResponse",
         "parameters": [
           {
             "in": "header",
@@ -378,6 +395,7 @@
     },
     "/cache/{value}": {
       "get": {
+        "operationId": "getCacheControlByValue",
         "parameters": [
           {
             "in": "path",
@@ -402,6 +420,7 @@
     },
     "/cookies": {
       "get": {
+        "operationId": "getCookies",
         "produces": [
           "application/json"
         ],
@@ -418,6 +437,7 @@
     },
     "/cookies/set/{name}/{value}": {
       "get": {
+        "operationId": "setCookieByNameValuePair",
         "parameters": [
           {
             "in": "path",
@@ -448,6 +468,7 @@
     },
     "/deflate": {
       "get": {
+        "operationId": "getDeflateEncodedData",
         "produces": [
           "application/json"
         ],
@@ -464,6 +485,7 @@
     },
     "/delay/{delay}": {
       "delete": {
+        "operationId": "deleteDelayBySeconds",
         "parameters": [
           {
             "in": "path",
@@ -486,6 +508,7 @@
         ]
       },
       "get": {
+        "operationId": "getDelayBySeconds",
         "parameters": [
           {
             "in": "path",
@@ -508,6 +531,7 @@
         ]
       },
       "patch": {
+        "operationId": "patchDelayBySeconds",
         "parameters": [
           {
             "in": "path",
@@ -530,6 +554,7 @@
         ]
       },
       "post": {
+        "operationId": "postDelayBySeconds",
         "parameters": [
           {
             "in": "path",
@@ -552,6 +577,7 @@
         ]
       },
       "put": {
+        "operationId": "putDelayBySeconds",
         "parameters": [
           {
             "in": "path",
@@ -576,6 +602,7 @@
     },
     "/delete": {
       "delete": {
+        "operationId": "echoDelete",
         "produces": [
           "application/json"
         ],
@@ -592,6 +619,7 @@
     },
     "/deny": {
       "get": {
+        "operationId": "getDeny",
         "produces": [
           "text/plain"
         ],
@@ -608,6 +636,7 @@
     },
     "/digest-auth/{qop}/{user}/{passwd}": {
       "get": {
+        "operationId": "getDigestAuthenticated1",
         "parameters": [
           {
             "description": "auth or auth-int",
@@ -649,6 +678,7 @@
     },
     "/digest-auth/{qop}/{user}/{passwd}/{algorithm}": {
       "get": {
+        "operationId": "getDigestAuthenticated2",
         "parameters": [
           {
             "description": "auth or auth-int",
@@ -698,6 +728,7 @@
     },
     "/digest-auth/{qop}/{user}/{passwd}/{algorithm}/{stale_after}": {
       "get": {
+        "operationId": "getDigestAuthenticated3",
         "description": "allow settings the stale_after argument.\n",
         "parameters": [
           {
@@ -755,6 +786,7 @@
     },
     "/drip": {
       "get": {
+        "operationId": "getDrip",
         "parameters": [
           {
             "default": 2,
@@ -805,6 +837,7 @@
     },
     "/encoding/utf8": {
       "get": {
+        "operationId": "getUtf8EncodedData",
         "produces": [
           "text/html"
         ],
@@ -821,6 +854,7 @@
     },
     "/etag/{etag}": {
       "get": {
+        "operationId": "getByEtag",
         "parameters": [
           {
             "in": "path",
@@ -860,6 +894,7 @@
     },
     "/get": {
       "get": {
+        "operationId": "echoParameters",
         "produces": [
           "application/json"
         ],
@@ -876,6 +911,7 @@
     },
     "/gzip": {
       "get": {
+        "operationId": "getGzipEncodedData",
         "produces": [
           "application/json"
         ],
@@ -892,6 +928,7 @@
     },
     "/headers": {
       "get": {
+        "operationId": "echoHeaders",
         "produces": [
           "application/json"
         ],
@@ -908,6 +945,7 @@
     },
     "/hidden-basic-auth/{user}/{passwd}": {
       "get": {
+        "operationId": "getHiddenBasicAuthenticated",
         "parameters": [
           {
             "in": "path",
@@ -942,6 +980,7 @@
     },
     "/html": {
       "get": {
+        "operationId": "getHtmlData",
         "produces": [
           "text/html"
         ],
@@ -958,6 +997,22 @@
     },
     "/image": {
       "get": {
+        "operationId": "getImage",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "type": "string",
+            "enum": [
+              "image/webp",
+              "image/svg+xml",
+              "image/jpeg",
+              "image/png",
+              "image/*"
+            ],
+            "x-ms-summary": "format"
+          }
+        ],
         "produces": [
           "image/webp",
           "image/svg+xml",
@@ -978,6 +1033,7 @@
     },
     "/image/jpeg": {
       "get": {
+        "operationId": "getJepgImage",
         "produces": [
           "image/jpeg"
         ],
@@ -994,6 +1050,7 @@
     },
     "/image/png": {
       "get": {
+        "operationId": "getPngImage",
         "produces": [
           "image/png"
         ],
@@ -1010,6 +1067,7 @@
     },
     "/image/svg": {
       "get": {
+        "operationId": "getSvgImage",
         "produces": [
           "image/svg+xml"
         ],
@@ -1026,6 +1084,7 @@
     },
     "/image/webp": {
       "get": {
+        "operationId": "getWebpImage",
         "produces": [
           "image/webp"
         ],
@@ -1042,6 +1101,7 @@
     },
     "/ip": {
       "get": {
+        "operationId": "echoIpAddress",
         "produces": [
           "application/json"
         ],
@@ -1058,6 +1118,7 @@
     },
     "/json": {
       "get": {
+        "operationId": "getJsonEncodedData",
         "produces": [
           "application/json"
         ],
@@ -1074,6 +1135,7 @@
     },
     "/links/{n}/{offset}": {
       "get": {
+        "operationId": "getLinksByNumberOffset",
         "parameters": [
           {
             "in": "path",
@@ -1104,6 +1166,7 @@
     },
     "/patch": {
       "patch": {
+        "operationId": "echoPatch",
         "produces": [
           "application/json"
         ],
@@ -1120,6 +1183,7 @@
     },
     "/post": {
       "post": {
+        "operationId": "echoPost",
         "produces": [
           "application/json"
         ],
@@ -1136,6 +1200,7 @@
     },
     "/put": {
       "put": {
+        "operationId": "echoPut",
         "produces": [
           "application/json"
         ],
@@ -1152,6 +1217,7 @@
     },
     "/range/{numbytes}": {
       "get": {
+        "operationId": "getRangedData",
         "parameters": [
           {
             "in": "path",
@@ -1176,6 +1242,7 @@
     },
     "/redirect-to": {
       "delete": {
+        "operationId": "deleteRedirectTo",
         "produces": [
           "text/html"
         ],
@@ -1190,6 +1257,7 @@
         ]
       },
       "get": {
+        "operationId": "getRedirectTo",
         "parameters": [
           {
             "in": "query",
@@ -1217,6 +1285,7 @@
         ]
       },
       "patch": {
+        "operationId": "patchRedirectTo",
         "produces": [
           "text/html"
         ],
@@ -1231,6 +1300,7 @@
         ]
       },
       "post": {
+        "operationId": "postRedirectTo",
         "parameters": [
           {
             "in": "formData",
@@ -1259,6 +1329,7 @@
         ]
       },
       "put": {
+        "operationId": "putRedirectTo",
         "parameters": [
           {
             "in": "formData",
@@ -1289,6 +1360,7 @@
     },
     "/redirect/{n}": {
       "get": {
+        "operationId": "getRedirectToNTimes",
         "parameters": [
           {
             "in": "path",
@@ -1313,6 +1385,7 @@
     },
     "/relative-redirect/{n}": {
       "get": {
+        "operationId": "getRelativeRedirectToNTimes",
         "parameters": [
           {
             "in": "path",
@@ -1337,6 +1410,7 @@
     },
     "/robots.txt": {
       "get": {
+        "operationId": "getRobotsTxt",
         "produces": [
           "text/plain"
         ],
@@ -1353,6 +1427,7 @@
     },
     "/status/{codes}": {
       "delete": {
+        "operationId": "deleteRespondStatusCode",
         "parameters": [
           {
             "in": "path",
@@ -1388,6 +1463,7 @@
         ]
       },
       "get": {
+        "operationId": "getRespondStatusCode",
         "parameters": [
           {
             "in": "path",
@@ -1423,6 +1499,7 @@
         ]
       },
       "patch": {
+        "operationId": "patchRespondStatusCode",
         "parameters": [
           {
             "in": "path",
@@ -1458,6 +1535,7 @@
         ]
       },
       "post": {
+        "operationId": "postRespondStatusCode",
         "parameters": [
           {
             "in": "path",
@@ -1493,6 +1571,7 @@
         ]
       },
       "put": {
+        "operationId": "putRespondStatusCode",
         "parameters": [
           {
             "in": "path",
@@ -1530,6 +1609,7 @@
     },
     "/stream-bytes/{n}": {
       "get": {
+        "operationId": "getStreamedBytesByN",
         "parameters": [
           {
             "in": "path",
@@ -1554,6 +1634,7 @@
     },
     "/stream/{n}": {
       "get": {
+        "operationId": "getStreamedJsonDataByN",
         "parameters": [
           {
             "in": "path",
@@ -1578,6 +1659,7 @@
     },
     "/user-agent": {
       "get": {
+        "operationId": "echoUserAgent",
         "produces": [
           "application/json"
         ],
@@ -1594,6 +1676,7 @@
     },
     "/uuid": {
       "get": {
+        "operationId": "getUUIDv4",
         "produces": [
           "application/json"
         ],
@@ -1610,6 +1693,7 @@
     },
     "/xml": {
       "get": {
+        "operationId": "getXmlEncodedData",
         "produces": [
           "application/xml"
         ],
