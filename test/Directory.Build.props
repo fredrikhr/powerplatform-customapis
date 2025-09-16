@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+
+  <!-- Import Directory.Build file from parent directory -->
+  <PropertyGroup>
+    <MSBuildAllProjects>
+      $(MSBuildAllProjects);$(MSBuildThisFileDirectory)..\solutions\$(MSBuildThisFileName)$(MSBuildThisFileExtension)</MSBuildAllProjects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\solutions\$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
+
+</Project>

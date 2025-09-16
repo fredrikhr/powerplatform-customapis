@@ -23,4 +23,8 @@
     <Project Path="solutions/PowerPlatformRuntimeExtensions/PowerPlatformRuntimeExtensions.cdsproj" Type="C#" />
     <Project Path="solutions/PowerPlatformSolutionManagementExtensions/PowerPlatformSolutionManagementExtensions.cdsproj" Type="C#" />
   </Folder>
+  <Folder Name="/test/">
+    <File Path="test/Directory.Build.props" />
+    <Project Path="test/HttpbinConnectorTest/HttpbinConnectorTest.cdsproj" Type="C#" />
+  </Folder>
 </Solution>

@@ -152,6 +152,157 @@
         "clear": true
       }
     },
+    // test/HttpbinConnectorTest
+    {
+      "label": "HttpbinConnectorTest | Build solution (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Debug",
+        "test/HttpbinConnectorTest"
+      ],
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnectorTest | Push to Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--path",
+        "bin/HttpbinConnectorTest/Debug/HttpbinConnectorTest.zip"
+      ],
+      "dependsOn": ["HttpbinConnectorTest | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnectorTest | Push and publish to Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--publish-changes",
+        "--path",
+        "bin/HttpbinConnectorTest/Debug/HttpbinConnectorTest.zip"
+      ],
+      "dependsOn": ["HttpbinConnectorTest | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnectorTest | Pull from Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "sync",
+        "--async",
+        "--packagetype",
+        "Unmanaged",
+        "--solution-folder",
+        "test/HttpbinConnectorTest/src"
+      ],
+      "dependsOn": [],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnectorTest | Build solution (Managed)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Release",
+        "test/HttpbinConnectorTest"
+      ],
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnectorTest | Push to Power Platform (Managed)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--publish-changes",
+        "--path",
+        "bin/HttpbinConnectorTest/Release/HttpbinConnectorTest.zip"
+      ],
+      "dependsOn": ["HttpbinConnectorTest | Build solution (Managed)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
     // solutions/PowerPlatformRuntimeExtensions
     {
       "label": "PowerPlatformRuntimeExtensions | Build solution (Unmanaged)",

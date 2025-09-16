@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.25083.168" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25083.168" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25083.00168">
+  <SolutionManifest>
+    <UniqueName>HttpbinConnectorTest</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="TEST | Httpbin Custom Connector" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>0.0.0</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>fredrikhr</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Fredrik Høisæther Rasch" languagecode="1033" />
+        <LocalizedName description="Fredrik Høisæther Rasch" languagecode="1044" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress>fredrik.rasch@gmail.com</EMailAddress>
+      <SupportingWebsiteUrl>https://github.com/fredrikhr</SupportingWebsiteUrl>
+      <CustomizationPrefix>frh</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>79884</CustomizationOptionValuePrefix>
+      <Addresses />
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="29" id="{edc5ce5c-e592-f011-b4cc-7c1e52606563}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="372" schemaName="httpbin_httpbinorg" displayName="httpbin" solution="HttpbinConnector (1.0.0)" id="{322bd8e2-f78e-405e-a885-6f8cce6045c8}" />
+        <Dependent type="29" displayName="TEST | Httpbin | Connection Parameters" id="{edc5ce5c-e592-f011-b4cc-7c1e52606563}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="372" schemaName="httpbin_httpbinorg" displayName="httpbin" solution="HttpbinConnector (1.0.0)" id="{322bd8e2-f78e-405e-a885-6f8cce6045c8}" />
+        <Dependent type="connectionreference" displayName="test_httpbin_httpbinorg" id.connectionreferencelogicalname="test_httpbin_httpbinorg" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

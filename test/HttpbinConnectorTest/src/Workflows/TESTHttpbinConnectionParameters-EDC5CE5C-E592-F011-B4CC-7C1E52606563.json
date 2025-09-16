@@ -1,0 +1,78 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "httpbin": {
+        "api": {
+          "name": "shared_httpbin-5fhttpbin-5ff4b9d5bea7551e98",
+          "logicalName": "httpbin_httpbinorg"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "test_httpbin_httpbinorg"
+        },
+        "runtimeSource": "invoker"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "In_headers": {
+          "runAfter": {},
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "",
+              "operationId": "echoConnectionParametersInHeader",
+              "connectionName": "httpbin"
+            },
+            "retryPolicy": {
+              "type": "none"
+            }
+          }
+        },
+        "In_body": {
+          "runAfter": {},
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "body": {}
+            },
+            "host": {
+              "apiId": "",
+              "operationId": "echoConnectionParametersInBody",
+              "connectionName": "httpbin"
+            },
+            "retryPolicy": {
+              "type": "none"
+            }
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}
