@@ -3,12 +3,16 @@
     "*.slnx": "xml",
     "*.tasks": "xml"
   },
-  "dotnet.defaultSolution": "PowerPlatform Extras.slnx",
+  "dotnet.defaultSolution": "Power Platform Extras.slnx",
   "dotnet.testWindow.useTestingPlatformProtocol": true,
   "json.schemas": [
     {
       "fileMatch": ["Workflows/*.json"],
       "url": "./.submodules/fredrikhr/powerplatform-sdk-extensions/schemas/modernflow-json/workflow-clientdata.json"
+    },
+    {
+      "fileMatch": ["Connectors/*_openapidefinition.json"],
+      "url": "https://github.com/microsoft/PowerPlatformConnectors/raw/refs/heads/dev/schemas/apiDefinition.swagger.schema.json"
     }
   ]
 }

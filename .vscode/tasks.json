@@ -1,6 +1,157 @@
 {
   "version": "2.0.0",
   "tasks": [
+    // solutions/HttpbinConnector
+    {
+      "label": "HttpbinConnector | Build solution (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Debug",
+        "solutions/HttpbinConnector"
+      ],
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnector | Push to Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--path",
+        "bin/HttpbinConnector/Debug/HttpbinConnector.zip"
+      ],
+      "dependsOn": ["HttpbinConnector | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnector | Push and publish to Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--publish-changes",
+        "--path",
+        "bin/HttpbinConnector/Debug/HttpbinConnector.zip"
+      ],
+      "dependsOn": ["HttpbinConnector | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnector | Pull from Power Platform (Unmanaged)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "sync",
+        "--async",
+        "--packagetype",
+        "Unmanaged",
+        "--solution-folder",
+        "solutions/HttpbinConnector/src"
+      ],
+      "dependsOn": [],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnector | Build solution (Managed)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Release",
+        "solutions/HttpbinConnector"
+      ],
+      "group": "build",
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "HttpbinConnector | Push to Power Platform (Managed)",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--publish-changes",
+        "--path",
+        "bin/HttpbinConnector/Release/HttpbinConnector.zip"
+      ],
+      "dependsOn": ["HttpbinConnector | Build solution (Managed)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
     // solutions/PowerPlatformRuntimeExtensions
     {
       "label": "PowerPlatformRuntimeExtensions | Build solution (Unmanaged)",

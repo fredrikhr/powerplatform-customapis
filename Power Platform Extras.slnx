@@ -19,6 +19,7 @@
   </Folder>
   <Folder Name="/solutions/">
     <File Path="solutions/Directory.Build.props" />
+    <Project Path="solutions/HttpbinConnector/HttpbinConnector.cdsproj" Type="C#" />
     <Project Path="solutions/PowerPlatformRuntimeExtensions/PowerPlatformRuntimeExtensions.cdsproj" Type="C#" />
     <Project Path="solutions/PowerPlatformSolutionManagementExtensions/PowerPlatformSolutionManagementExtensions.cdsproj" Type="C#" />
   </Folder>

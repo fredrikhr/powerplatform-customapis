@@ -1,0 +1,16 @@
+{
+  "authType": {
+    "type": "string",
+    "allowedValues": [{ "value": "anonymous" }],
+    "uiDefinition": {
+      "displayName": "Authentication Type",
+      "description": "Authentication type to connect to your API",
+      "tooltip": "Authentication type to connect to your API",
+      "constraints": {
+        "tabIndex": 1,
+        "required": "true",
+        "allowedValues": [{ "text": "Public", "value": "anonymous" }]
+      }
+    }
+  }
+}

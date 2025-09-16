@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <connectorid>322bd8e2-f78e-405e-a885-6f8cce6045c8</connectorid>
+  <description>HTTP Request &amp; Response Service</description>
+  <displayname>httpbin</displayname>
+  <iconbrandcolor>#ffffff</iconbrandcolor>
+  <name>httpbin_httpbinorg</name>
+  <connectortype>1</connectortype>
+  <openapidefinition>/Connector/httpbin_httpbinorg_openapidefinition.json</openapidefinition>
+  <connectionparameters>/Connector/httpbin_httpbinorg_connectionparameters.json</connectionparameters>
+  <policytemplateinstances>/Connector/httpbin_httpbinorg_policytemplateinstances.json</policytemplateinstances>
+</Connector>
