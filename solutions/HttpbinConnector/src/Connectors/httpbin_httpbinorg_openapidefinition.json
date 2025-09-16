@@ -1707,6 +1707,40 @@
           "Response formats"
         ]
       }
+    },
+    "/connection-parameters/headers": {
+      "get": {
+        "operationId": "echoConnectionParametersInHeader",
+        "responses": {
+          "200": {
+            "description": "The request's headers."
+          }
+        },
+        "summary": "Return the incoming request's HTTP headers. Applies headers using custom connector policy templates."
+      }
+    },
+    "/connection-parameters/body": {
+      "post": {
+        "operationId": "echoConnectionParametersInBody",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request's POST parameters."
+          }
+        },
+        "summary": "The request's POST parameters. Applies properties in request body using custom connector policy templates."
+      }
     }
   },
   "schemes": [

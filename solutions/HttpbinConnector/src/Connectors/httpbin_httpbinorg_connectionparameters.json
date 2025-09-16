@@ -12,5 +12,13 @@
         "allowedValues": [{ "text": "Public", "value": "anonymous" }]
       }
     }
+  },
+  "testConnectionParameter": {
+    "type": "string",
+    "uiDefinition": {
+      "displayName": "Test Connection Parameter",
+      "description": "Enter any value stored in the connection parameters",
+      "constraints": { "tabIndex": 2, "required": false }
+    }
   }
 }

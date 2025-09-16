@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "TemplateId": "routerequesttoendpoint",
+    "Title": "Route Connection Parameters in Headers to echo header operation",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPath": "/headers",
+      "x-ms-apimTemplateParameter.httpMethod": "@Request.OriginalHTTPMethod",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInHeader"]
+    }
+  },
+  {
+    "TemplateId": "routerequesttoendpoint",
+    "Title": "Route Connection Parameters in Headers to echo POST operation",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPath": "/post",
+      "x-ms-apimTemplateParameter.httpMethod": "@Request.OriginalHTTPMethod",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  },
+  {
+    "TemplateId": "setheader",
+    "Title": "Set Connection Parameters in Headers",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.name": "X-Test-Header",
+      "x-ms-apimTemplateParameter.value": "@connectionParameters('testConnectionParameter')",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInHeader"]
+    }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-single-quote",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "@connectionParameters('testConnectionParameter')",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body enclosed in curlies",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-single-quote-with-curlies",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "{@connectionParameters('testConnectionParameter')}",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body using double quotes",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-double-quote",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "@connectionParameters(\"testConnectionParameter\")",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body using double quotes enclosed in curlies",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-double-quote-with-curlies",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "{@connectionParameters(\"testConnectionParameter\")}",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  }
+]
