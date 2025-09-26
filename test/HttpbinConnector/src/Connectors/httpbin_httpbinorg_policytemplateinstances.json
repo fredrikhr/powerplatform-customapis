@@ -70,5 +70,49 @@
       "x-ms-apimTemplate-policySection": "Request",
       "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
     }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body using dot-expression",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-dotted",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "@connectionParameters.testConnectionParameter",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body using dot-expression enclosed in curlies",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-dotted-with-curlies",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "{@connectionParameters.testConnectionParameter}",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body using parentheses and dot-expression",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-dotted-parens",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "@connectionParameters.('testConnectionParameter')",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
+  },
+  {
+    "TemplateId": "setproperty",
+    "Title": "Set Connection Parameters in Body using parentheses and dot-expression enclosed in curlies",
+    "Parameters": {
+      "x-ms-apimTemplateParameter.newPropertyParentPathTemplate": "@body()",
+      "x-ms-apimTemplateParameter.newPropertySubPathTemplate": "test-dotted-parens-with-curlies",
+      "x-ms-apimTemplateParameter.propertyValuePathTemplate": "{@connectionParameters.('testConnectionParameter')}",
+      "x-ms-apimTemplate-policySection": "Request",
+      "x-ms-apimTemplate-operationName": ["echoConnectionParametersInBody"]
+    }
   }
 ]
