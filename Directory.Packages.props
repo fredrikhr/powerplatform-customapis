@@ -17,21 +17,21 @@
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="FredrikHr.NupkgMSBuild.PackageAuthorSigning">
-      <Version>1.0.0</Version>
+      <Version>1.0.1</Version>
     </PackageVersion>
     <PackageVersion Include="FredrikHr.NupkgMSBuild.PackPackageReference">
-      <Version>1.0.0</Version>
+      <Version>1.0.1</Version>
     </PackageVersion>
     <PackageVersion Include="FredrikHr.NupkgMSBuild.StripNuspecTfm">
-      <Version>1.0.0</Version>
+      <Version>1.0.1</Version>
     </PackageVersion>
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage">
-      <Version>1.48.2</Version>
+      <Version>1.50.1</Version>
     </PackageVersion>
     <PackageVersion Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution">
-      <Version>1.48.2</Version>
+      <Version>1.50.1</Version>
     </PackageVersion>
     <PackageVersion Include="Microsoft.CrmSdk.CoreAssemblies">
       <Version>9.0.2.59</Version>
