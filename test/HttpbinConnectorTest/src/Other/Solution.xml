@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.25083.168" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25083.168" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25083.00168">
+<ImportExportXml version="9.2.25094.162" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25094.162" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25095.00163">
   <SolutionManifest>
     <UniqueName>HttpbinConnectorTest</UniqueName>
     <LocalizedNames>
@@ -26,11 +26,11 @@
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
-        <Required type="372" schemaName="httpbin_httpbinorg" displayName="httpbin" solution="HttpbinConnector (1.0.0)" id="{322bd8e2-f78e-405e-a885-6f8cce6045c8}" />
+        <Required type="372" schemaName="httpbin_httpbinorg" displayName="httpbin" solution="Active" id="{322bd8e2-f78e-405e-a885-6f8cce6045c8}" />
         <Dependent type="29" displayName="TEST | Httpbin | Connection Parameters" id="{edc5ce5c-e592-f011-b4cc-7c1e52606563}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="372" schemaName="httpbin_httpbinorg" displayName="httpbin" solution="HttpbinConnector (1.0.0)" id="{322bd8e2-f78e-405e-a885-6f8cce6045c8}" />
+        <Required type="372" schemaName="httpbin_httpbinorg" displayName="httpbin" solution="Active" id="{322bd8e2-f78e-405e-a885-6f8cce6045c8}" />
         <Dependent type="connectionreference" displayName="test_httpbin_httpbinorg" id.connectionreferencelogicalname="test_httpbin_httpbinorg" />
       </MissingDependency>
     </MissingDependencies>

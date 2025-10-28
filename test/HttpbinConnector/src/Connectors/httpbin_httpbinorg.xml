@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <connectorid>322bd8e2-f78e-405e-a885-6f8cce6045c8</connectorid>
-  <description>HTTP Request &amp; Response Service</description>
+  <description>A simple HTTP Request &amp; Response Service.&lt;br/&gt; &lt;br/&gt; &lt;b&gt;Run locally: &lt;/b&gt; &lt;code&gt;$ docker run -p 80:80 kennethreitz/httpbin&lt;/code&gt;</description>
   <displayname>httpbin</displayname>
   <iconbrandcolor>#ffffff</iconbrandcolor>
   <name>httpbin_httpbinorg</name>
   <connectortype>1</connectortype>
+  <scriptoperations>[]</scriptoperations>
   <openapidefinition>/Connector/httpbin_httpbinorg_openapidefinition.json</openapidefinition>
   <connectionparameters>/Connector/httpbin_httpbinorg_connectionparameters.json</connectionparameters>
   <policytemplateinstances>/Connector/httpbin_httpbinorg_policytemplateinstances.json</policytemplateinstances>
+  <customcodeblobcontent>/Connector/httpbin_httpbinorg_customcodeblobcontent.csx</customcodeblobcontent>
+  <iconblob>/Connector/httpbin_httpbinorg_iconblob.Png</iconblob>
 </Connector>
