@@ -12,7 +12,7 @@
     </GlobalPackageReference>
     <GlobalPackageReference Include="FredrikHr.NupkgMSBuild.GitHubPackageProjectUrlInference">
       <ProjectReference>$(MSBuildThisFileDirectory).submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.GitHubPackageProjectUrlInference\FredrikHr.NupkgMSBuild.GitHubPackageProjectUrlInference.csproj</ProjectReference>
-      <Version>1.0.0</Version>
+      <Version>1.0.1</Version>
     </GlobalPackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -34,7 +34,7 @@
       <Version>1.50.1</Version>
     </PackageVersion>
     <PackageVersion Include="Microsoft.CrmSdk.CoreAssemblies">
-      <Version>9.0.2.59</Version>
+      <Version>9.0.2.60</Version>
     </PackageVersion>
   </ItemGroup>
 </Project>
