@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_ComputeNonCryptoHash">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Computes the Hash digest of the specified payload using the specified non-cryptographic Hash algorithm.">
+    <label description="Computes the Hash digest of the specified payload using the specified non-cryptographic Hash algorithm." languagecode="1033" />
+  </description>
+  <displayname default="Compute non-cryptographic Hash">
+    <label description="Compute non-cryptographic Hash" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Compute non-cryptographic Hash</name>
+  <plugintypeid>
+    <plugintypeexportkey>452D39EBDB90F4838C25EDDFDF081928DA129ED13136647DAF841A0CA0851740</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -3,10 +3,17 @@
 
   <PropertyGroup>
     <PackageId>pwrplatf_RuntimeExtensionCommonPlugins</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.1.0</Version>
     <Description>No description provided.</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FredrikHr.NupkgMSBuild.PackPackageReference">
+      <PrivateAssets>all</PrivateAssets>
+      <ProjectReference>$(MSBuildThisFileDirectory)..\..\.submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.PackPackageReference\FredrikHr.NupkgMSBuild.PackPackageReference.csproj</ProjectReference>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="CoreFramework.CapCoreServices.TopologyModel, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
@@ -17,6 +24,10 @@
       <HintPath>..\..\bld\dataversesandboxworker\Microsoft.Xrm.Kernel.Contracts.Internal.dll</HintPath>
       <Private>true</Private>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Hashing" Pack="true" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>

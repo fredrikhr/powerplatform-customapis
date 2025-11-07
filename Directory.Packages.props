@@ -20,7 +20,7 @@
       <Version>1.0.1</Version>
     </PackageVersion>
     <PackageVersion Include="FredrikHr.NupkgMSBuild.PackPackageReference">
-      <Version>1.0.1</Version>
+      <Version>1.1.1</Version>
     </PackageVersion>
     <PackageVersion Include="FredrikHr.NupkgMSBuild.StripNuspecTfm">
       <Version>1.0.1</Version>
@@ -35,6 +35,11 @@
     </PackageVersion>
     <PackageVersion Include="Microsoft.CrmSdk.CoreAssemblies">
       <Version>9.0.2.60</Version>
+    </PackageVersion>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="System.IO.Hashing">
+      <Version>9.0.6</Version>
     </PackageVersion>
   </ItemGroup>
 </Project>

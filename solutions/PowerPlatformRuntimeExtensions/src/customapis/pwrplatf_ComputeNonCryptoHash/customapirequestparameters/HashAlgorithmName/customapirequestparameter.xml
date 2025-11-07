@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="HashAlgorithmName">
+  <description default="The name of the hash algorithm to use">
+    <label description="The name of the hash algorithm to use" languagecode="1033" />
+  </description>
+  <displayname default="Hash Algorithm">
+    <label description="Hash Algorithm" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>pwrplatf_ComputeNonCryptoHash-In-HashAlgorithmName</name>
+  <type>10</type>
+</customapirequestparameter>
