@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_GenerateNameBasedUuid">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Generates a consistent name based UUID version 5, compliant with RFC9562, Section 5.2">
+    <label description="Generates a consistent name based UUID version 5, compliant with RFC9562, Section 5.2" languagecode="1033" />
+  </description>
+  <displayname default="Generate name based UUID">
+    <label description="Generate name based UUID" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Generate name based UUID</name>
+  <plugintypeid>
+    <plugintypeexportkey>F0BD9456041BA1E6F479582CEB62A181E6B3EB65C2545EC109410D7891C52B9E</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="NamespaceId">
+  <description default="The namespace used for the generated UUID">
+    <label description="The namespace used for the generated UUID" languagecode="1033" />
+  </description>
+  <displayname default="Namespace ID">
+    <label description="Namespace ID" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_GenerateNameBasedUuid-Out-NamespaceId</name>
+  <type>12</type>
+</customapiresponseproperty>
