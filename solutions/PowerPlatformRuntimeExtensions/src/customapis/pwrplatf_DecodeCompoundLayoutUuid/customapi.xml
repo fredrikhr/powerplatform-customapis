@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_DecodeCompoundLayoutUuid">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Decodes one or more integer values from a custom layout UUID version 8 value.">
+    <label description="Decodes one or more integer values from a custom layout UUID version 8 value." languagecode="1033" />
+  </description>
+  <displayname default="Decode compound layout UUID">
+    <label description="Decode compound layout UUID" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Decode compound layout UUID</name>
+  <plugintypeid>
+    <plugintypeexportkey>6C023E4F92B6B1D6C82EEE26DA4AA6F1DABF68D3542431A36D99DD18730CD0C5</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

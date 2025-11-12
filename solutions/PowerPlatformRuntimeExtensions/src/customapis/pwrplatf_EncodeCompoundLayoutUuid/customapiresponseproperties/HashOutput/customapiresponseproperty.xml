@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="HashOutput">
+  <description default="A thumbprint calculated from the specified name that is encoded into the UUID value.">
+    <label description="A thumbprint calculated from the specified name that is encoded into the UUID value." languagecode="1033" />
+  </description>
+  <displayname default="Hash output">
+    <label description="Hash output" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_EncodeCompoundLayoutUuid-Out-HashOutput</name>
+  <type>10</type>
+</customapiresponseproperty>

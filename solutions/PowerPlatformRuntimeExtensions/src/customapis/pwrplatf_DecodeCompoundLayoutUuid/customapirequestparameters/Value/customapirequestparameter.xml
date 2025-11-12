@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Value">
+  <description default="A UUID version 8 value containing values encoded according to the specified layout.">
+    <label description="A UUID version 8 value containing values encoded according to the specified layout." languagecode="1033" />
+  </description>
+  <displayname default="UUID">
+    <label description="UUID" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>pwrplatf_DecodeCompoundLayoutUuid-In-Value</name>
+  <type>12</type>
+</customapirequestparameter>

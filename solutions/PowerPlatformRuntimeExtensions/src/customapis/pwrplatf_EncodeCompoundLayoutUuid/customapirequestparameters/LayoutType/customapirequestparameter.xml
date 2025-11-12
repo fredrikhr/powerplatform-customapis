@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="LayoutType">
+  <description default="The layout type to use when decoding: I32 or I64 repated up to 3 times.">
+    <label description="The layout type to use when decoding: I32 or I64 repated up to 3 times." languagecode="1033" />
+  </description>
+  <displayname default="Layout type">
+    <label description="Layout type" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>pwrplatf_EncodeCompoundLayoutUuid-In-LayoutType</name>
+  <type>10</type>
+</customapirequestparameter>

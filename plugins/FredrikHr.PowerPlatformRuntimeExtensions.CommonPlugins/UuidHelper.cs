@@ -11,7 +11,7 @@ internal static class UuidHelper
         if (bytes.Length < 16)
         {
             throw new ArgumentException(
-                message: "",
+                message: $"The specified span of bytes must have a length of at least 16 bytes. Actual: {bytes.Length} bytes.",
                 paramName: nameof(bigEndianBytes)
                 );
         }
@@ -54,5 +54,35 @@ internal static class UuidHelper
             int16[1] = BinaryPrimitives.ReverseEndianness(int16[1]);
         }
         return true;
+    }
+
+    internal static void Deconstruct(
+        this Guid guid,
+        out int a,
+        out short b,
+        out short c,
+        out byte d,
+        out byte e,
+        out byte f,
+        out byte g,
+        out byte h,
+        out byte i,
+        out byte j,
+        out byte k
+        )
+    {
+        Span<byte> guidBytes = stackalloc byte[16];
+        MemoryMarshal.Write(guidBytes, ref guid);
+        a = MemoryMarshal.Read<int>(guidBytes);
+        b = MemoryMarshal.Read<short>(guidBytes[4..]);
+        c = MemoryMarshal.Read<short>(guidBytes[6..]);
+        d = guidBytes[8];
+        e = guidBytes[9];
+        f = guidBytes[10];
+        g = guidBytes[11];
+        h = guidBytes[12];
+        i = guidBytes[13];
+        j = guidBytes[14];
+        k = guidBytes[15];
     }
 }
