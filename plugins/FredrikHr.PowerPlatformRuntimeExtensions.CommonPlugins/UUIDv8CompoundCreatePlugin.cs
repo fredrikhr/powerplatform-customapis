@@ -4,7 +4,7 @@ public sealed class UUIDv8CompoundCreatePlugin : IPlugin
 {
     internal static class InputParameterNames
     {
-        internal const string NameText = nameof(NameText);
+        internal const string Name = nameof(Name);
         internal const string LayoutType = nameof(LayoutType);
         internal const string LayoutParameters = nameof(LayoutParameters);
     }
@@ -22,7 +22,7 @@ public sealed class UUIDv8CompoundCreatePlugin : IPlugin
         ParameterCollection outputs = context.OutputParameters;
 
         byte[] nameBytes = [];
-        if (inputs.TryGetValue(InputParameterNames.NameText, out string nameText))
+        if (inputs.TryGetValue(InputParameterNames.Name, out string nameText))
         {
             nameText = nameText.Normalize(System.Text.NormalizationForm.FormC);
             nameBytes = System.Text.Encoding.UTF8.GetBytes(nameText);

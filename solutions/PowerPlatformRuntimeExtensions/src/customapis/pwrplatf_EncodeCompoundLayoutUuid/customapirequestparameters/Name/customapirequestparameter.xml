@@ -1,12 +1,12 @@
-<customapirequestparameter uniquename="NameText">
+<customapirequestparameter uniquename="Name">
   <description default="Namespace within which the encoded values are valid.">
     <label description="Namespace within which the encoded values are valid." languagecode="1033" />
   </description>
-  <displayname default="Namespace">
-    <label description="Namespace" languagecode="1033" />
+  <displayname default="Name">
+    <label description="Name" languagecode="1033" />
   </displayname>
   <iscustomizable>1</iscustomizable>
   <isoptional>0</isoptional>
-  <name>pwrplatf_EncodeCompoundLayoutUuid-In-NameText</name>
+  <name>pwrplatf_EncodeCompoundLayoutUuid-In-Name</name>
   <type>10</type>
 </customapirequestparameter>
