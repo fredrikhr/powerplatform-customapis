@@ -1,0 +1,14 @@
+Publisher:
+  UniqueName: fredrikhr
+  LocalizedNames:
+    LocalizedName:
+    - '@description': Fredrik Høisæther Rasch
+      '@languagecode': 1033
+    - '@description': Fredrik Høisæther Rasch
+      '@languagecode': 1044
+  Descriptions: 
+  EMailAddress: fredrik.rasch@gmail.com
+  SupportingWebsiteUrl: https://github.com/fredrikhr
+  CustomizationPrefix: frh
+  CustomizationOptionValuePrefix: 79884
+  Addresses: 

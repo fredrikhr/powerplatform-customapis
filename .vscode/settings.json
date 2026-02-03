@@ -6,7 +6,7 @@
   "dotnet.defaultSolution": "Power Platform Extras.slnx",
   "json.schemas": [
     {
-      "fileMatch": ["Workflows/*.json"],
+      "fileMatch": ["powerplatform/**/modernflows/*/*.json"],
       "url": "./.submodules/fredrikhr/powerplatform-sdk-extensions/schemas/modernflow-json/workflow-clientdata.json"
     },
     {

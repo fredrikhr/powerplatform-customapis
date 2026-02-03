@@ -28,6 +28,10 @@ charset = utf-8-bom
 indent_style = tab
 indent_size = 4
 
+[powerplatform/**]
+end_of_line = crlf
+insert_final_newline = false
+
 # C# files
 [*.cs]
 
