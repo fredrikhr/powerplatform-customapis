@@ -15,7 +15,7 @@
   <ItemGroup>
     <PackageReference Include="FredrikHr.NupkgMSBuild.PackPackageReference">
       <PrivateAssets>all</PrivateAssets>
-      <ProjectReference>$(MSBuildThisFileDirectory)..\..\.submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.PackPackageReference\FredrikHr.NupkgMSBuild.PackPackageReference.csproj</ProjectReference>
+      <ProjectReference>$(MSBuildThisFileDirectory)..\..\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.PackPackageReference\FredrikHr.NupkgMSBuild.PackPackageReference.csproj</ProjectReference>
     </PackageReference>
   </ItemGroup>
 

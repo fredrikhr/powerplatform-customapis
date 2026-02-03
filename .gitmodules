@@ -1,4 +1,4 @@
-[submodule "github.com/fredrikhr/powerplatform-sdk-extensions"]
-	path = .submodules/fredrikhr/powerplatform-sdk-extensions
-	url = https://github.com/fredrikhr/powerplatform-sdk-extensions.git
+[submodule "github.com/fredrikhr/nuget-msbuild-extensions"]
+	path = .submodules/fredrikhr/nuget-msbuild-extensions
+	url = https://github.com/fredrikhr/nuget-msbuild-extensions.git
 	branch = main
