@@ -24,7 +24,6 @@
   </Folder>
   <Folder Name="/test/">
     <File Path="test/Directory.Build.props" />
-    <Project Path="test/HttpbinConnector/HttpbinConnector.cdsproj" Type="C#" />
     <Project Path="test/HttpbinConnectorTest/HttpbinConnectorTest.cdsproj" Type="C#" />
   </Folder>
 </Solution>

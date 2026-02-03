@@ -1,0 +1,6 @@
+RootComponents:
+  RootComponent:
+    '@type': 372
+    '@id': '{322bd8e2-f78e-405e-a885-6f8cce6045c8}'
+    '@schemaName': httpbin_httpbinorg
+    '@behavior': 0
