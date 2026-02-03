@@ -16,10 +16,6 @@
     <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage">
-      <PrivateAssets>all</PrivateAssets>
-      <ProjectReference>$(MSBuildThisFileDirectory)..\.submodules\fredrikhr\powerplatform-sdk-extensions\build\FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage\FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage.csproj</ProjectReference>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

@@ -27,9 +27,6 @@
     </PackageVersion>
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.PluginPackage">
-      <Version>2.1.2</Version>
-    </PackageVersion>
     <PackageVersion Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution">
       <Version>2.1.2</Version>
     </PackageVersion>

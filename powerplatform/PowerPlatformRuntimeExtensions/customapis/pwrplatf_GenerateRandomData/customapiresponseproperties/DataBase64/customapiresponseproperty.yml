@@ -1,0 +1,15 @@
+customapiresponseproperty:
+  '@uniquename': DataBase64
+  description:
+    '@default': Generated random data as a Base64-encoded string
+    label:
+      '@description': Generated random data as a Base64-encoded string
+      '@languagecode': 1033
+  displayname:
+    '@default': Data
+    label:
+      '@description': Data
+      '@languagecode': 1033
+  iscustomizable: 1
+  name: pwrplatf_GenerateRandomData-Out-DataBase64
+  type: 10

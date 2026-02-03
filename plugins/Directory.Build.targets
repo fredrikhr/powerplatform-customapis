@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+
+  <!-- Import Directory.Build file from parent directory -->
+  <PropertyGroup>
+    <MSBuildAllProjects>
+      $(MSBuildAllProjects);$(MSBuildThisFileDirectory)..\$(MSBuildThisFileName)$(MSBuildThisFileExtension)</MSBuildAllProjects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
+
+  <Target
+    Name="CopyNupkgPackOutputToPowerPlatformPluginPackageDirectory"
+    AfterTargets="_PackAsBuildAfterTarget"
+    DependsOnTargets="Pack"
+    Condition="'$(Configuration)' == 'Release'"
+    Inputs="@(NuGetPackOutput->WithMetadataValue('Extension', '.nupkg'))"
+    Outputs="%(PowerPlatformTargetSolutionFolder.FullPath)\pluginpackages\$(PackageId)\package\$(PackageId).nupkg"
+  >
+    <Copy
+      SourceFiles="@(NuGetPackOutput->WithMetadataValue('Extension', '.nupkg'))"
+      DestinationFiles="%(PowerPlatformTargetSolutionFolder.FullPath)\pluginpackages\$(PackageId)\package\$(PackageId).nupkg"
+    >
+      <Output
+        TaskParameter="CopiedFiles"
+        ItemName="PowerPlatformPluginPackageFile"
+      />
+    </Copy>
+    <Message
+      Importance="high"
+      Text="$(MSBuildProjectName) → @(PowerPlatformPluginPackageFile->'$([MSBuild]::MakeRelative('$(MSBuildThisFileDirectory)..\', '%(PowerPlatformPluginPackageFile.FullPath)'))')"
+    />
+  </Target>
+
+  <Target
+    Name="UpdatePowerPlatformPluginPackageMetadata"
+    AfterTargets="_PackAsBuildAfterTarget"
+    DependsOnTargets="Pack"
+    Condition="'$(Configuration)' == 'Release'"
+    Inputs="@(NuGetPackOutput->WithMetadataValue('Extension', '.nuspec'))"
+    Outputs="%(PowerPlatformTargetSolutionFolder.FullPath)\pluginpackages\$(PackageId)\pluginpackage.yml"
+  >
+    <ItemGroup>
+      <PowerPlatformPluginPackageYml Include="%(PowerPlatformTargetSolutionFolder.FullPath)\pluginpackages\$(PackageId)\pluginpackage.yml" />
+    </ItemGroup>
+    <PropertyGroup>
+      <PowerPlatformPluginPackageYmlText>$([System.IO.File]::ReadAllText(%(PowerPlatformPluginPackageYml.FullPath)))</PowerPlatformPluginPackageYmlText>
+      <PowerPlatformPluginPackageYmlNewText>$([System.Text.RegularExpressions.Regex]::Replace($(PowerPlatformPluginPackageYmlText), '(?&lt;=(?:\s|^)version:\s*)\S.*', $(PackageVersion)))</PowerPlatformPluginPackageYmlNewText>
+    </PropertyGroup>
+    <WriteLinesToFile
+      File="@(PowerPlatformPluginPackageYml)"
+      Lines="$(PowerPlatformPluginPackageYmlNewText)"
+      Overwrite="true"
+      Condition="'$(PowerPlatformPluginPackageYmlText)' != '$(PowerPlatformPluginPackageYmlNewText)'"
+    />
+  </Target>
+
+</Project>

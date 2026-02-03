@@ -1,0 +1,16 @@
+customapirequestparameter:
+  '@uniquename': Indented
+  description:
+    '@default': Whether to output the result as indented JSON
+    label:
+      '@description': Whether to output the result as indented JSON
+      '@languagecode': 1033
+  displayname:
+    '@default': Indented output
+    label:
+      '@description': Indented output
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 1
+  name: pwrplatf_TransformJsonArrayToLookup-In-Indented
+  type: 0

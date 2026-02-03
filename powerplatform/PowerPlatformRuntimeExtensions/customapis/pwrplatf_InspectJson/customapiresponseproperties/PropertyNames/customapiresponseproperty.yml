@@ -1,0 +1,15 @@
+customapiresponseproperty:
+  '@uniquename': PropertyNames
+  description:
+    '@default': The names of the properties contained in the root element object of the JSON document.
+    label:
+      '@description': The names of the properties contained in the root element object of the JSON document.
+      '@languagecode': 1033
+  displayname:
+    '@default': Property names
+    label:
+      '@description': Property names
+      '@languagecode': 1033
+  iscustomizable: 1
+  name: pwrplatf_InspectJson-Out-PropertyNames
+  type: 11

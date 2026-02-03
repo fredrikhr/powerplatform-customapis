@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PowerPlatformTargetSolutionFolder Include="..\..\powerplatform\PowerPlatformRuntimeExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FredrikHr.NupkgMSBuild.PackPackageReference">
       <PrivateAssets>all</PrivateAssets>
       <ProjectReference>$(MSBuildThisFileDirectory)..\..\.submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.PackPackageReference\FredrikHr.NupkgMSBuild.PackPackageReference.csproj</ProjectReference>

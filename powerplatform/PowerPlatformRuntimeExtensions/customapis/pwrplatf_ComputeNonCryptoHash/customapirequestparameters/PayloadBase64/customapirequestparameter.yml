@@ -1,0 +1,16 @@
+customapirequestparameter:
+  '@uniquename': PayloadBase64
+  description:
+    '@default': Base64 encoded payload to hash
+    label:
+      '@description': Base64 encoded payload to hash
+      '@languagecode': 1033
+  displayname:
+    '@default': Payload
+    label:
+      '@description': Payload
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 1
+  name: pwrplatf_ComputeNonCryptoHash-In-PayloadBase64
+  type: 10

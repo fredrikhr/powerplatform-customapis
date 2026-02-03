@@ -1,0 +1,15 @@
+customapiresponseproperty:
+  '@uniquename': Value
+  description:
+    '@default': The generated UUID version 5 value
+    label:
+      '@description': The generated UUID version 5 value
+      '@languagecode': 1033
+  displayname:
+    '@default': UUID
+    label:
+      '@description': UUID
+      '@languagecode': 1033
+  iscustomizable: 1
+  name: pwrplatf_GenerateNameBasedUuid-Out-Value
+  type: 12

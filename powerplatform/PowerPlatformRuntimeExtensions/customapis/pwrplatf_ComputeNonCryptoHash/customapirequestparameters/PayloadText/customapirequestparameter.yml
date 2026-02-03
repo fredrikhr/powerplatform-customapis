@@ -1,0 +1,16 @@
+customapirequestparameter:
+  '@uniquename': PayloadText
+  description:
+    '@default': Textual payload to hash
+    label:
+      '@description': Textual payload to hash
+      '@languagecode': 1033
+  displayname:
+    '@default': Payload text
+    label:
+      '@description': Payload text
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 1
+  name: pwrplatf_ComputeNonCryptoHash-In-PayloadText
+  type: 10

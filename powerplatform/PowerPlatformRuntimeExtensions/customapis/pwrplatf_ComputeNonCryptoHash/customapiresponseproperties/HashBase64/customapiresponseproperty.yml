@@ -1,0 +1,15 @@
+customapiresponseproperty:
+  '@uniquename': HashBase64
+  description:
+    '@default': Base64 encoded hash computation result
+    label:
+      '@description': Base64 encoded hash computation result
+      '@languagecode': 1033
+  displayname:
+    '@default': Hash Result
+    label:
+      '@description': Hash Result
+      '@languagecode': 1033
+  iscustomizable: 1
+  name: pwrplatf_ComputeNonCryptoHash-Out-HashBase64
+  type: 10

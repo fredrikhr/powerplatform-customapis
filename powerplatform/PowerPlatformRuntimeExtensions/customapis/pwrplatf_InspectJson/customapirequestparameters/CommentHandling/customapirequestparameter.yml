@@ -1,0 +1,16 @@
+customapirequestparameter:
+  '@uniquename': CommentHandling
+  description:
+    '@default': Determines how the JSON document handles comments
+    label:
+      '@description': Determines how the JSON document handles comments
+      '@languagecode': 1033
+  displayname:
+    '@default': Comment Handling
+    label:
+      '@description': Comment Handling
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 1
+  name: pwrplatf_InspectJson-In-CommentHandling
+  type: 10

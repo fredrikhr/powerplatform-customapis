@@ -1,0 +1,16 @@
+customapirequestparameter:
+  '@uniquename': NameText
+  description:
+    '@default': The name for which to generate a UUID. The name should (probably) be unique within the given namespace.
+    label:
+      '@description': The name for which to generate a UUID. The name should (probably) be unique within the given namespace.
+      '@languagecode': 1033
+  displayname:
+    '@default': Name
+    label:
+      '@description': Name
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 1
+  name: pwrplatf_GenerateNameBasedUuid-In-NameText
+  type: 10

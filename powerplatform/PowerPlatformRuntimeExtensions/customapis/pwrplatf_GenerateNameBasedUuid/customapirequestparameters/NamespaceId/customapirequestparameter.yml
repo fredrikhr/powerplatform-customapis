@@ -1,0 +1,16 @@
+customapirequestparameter:
+  '@uniquename': NamespaceId
+  description:
+    '@default': The namespace within which the name is (probably) unique.
+    label:
+      '@description': The namespace within which the name is (probably) unique.
+      '@languagecode': 1033
+  displayname:
+    '@default': Custom Namespace ID
+    label:
+      '@description': Custom Namespace ID
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 1
+  name: pwrplatf_GenerateNameBasedUuid-In-NamespaceId
+  type: 12
