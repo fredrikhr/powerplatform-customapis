@@ -8,4 +8,4 @@ pluginpackage:
     '#text': pwrplatf_RuntimeExtensionCommonPlugins.nupkg
   statecode: 0
   statuscode: 1
-  version: 2.0.0
+  version: 2.0.1
