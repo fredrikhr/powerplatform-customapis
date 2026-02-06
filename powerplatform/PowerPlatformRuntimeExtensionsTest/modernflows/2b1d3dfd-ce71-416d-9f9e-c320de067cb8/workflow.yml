@@ -1,0 +1,31 @@
+Workflow:
+  '@WorkflowId': '{2b1d3dfd-ce71-416d-9f9e-c320de067cb8}'
+  '@Name': TEST | Power Platform Runtime Extensions | Byte Utilities
+  JsonFileName: /modernflows/2b1d3dfd-ce71-416d-9f9e-c320de067cb8/workflow.json
+  Type: 1
+  Subprocess: 0
+  Category: 5
+  Mode: 0
+  Scope: 4
+  OnDemand: 0
+  TriggerOnCreate: 0
+  TriggerOnDelete: 0
+  AsyncAutodelete: 0
+  SyncWorkflowLogOnFailure: 0
+  StateCode: 1
+  StatusCode: 2
+  RunAs: 1
+  IsTransacted: 1
+  IntroducedVersion: 0.0.0
+  IsCustomizable: 1
+  RendererObjectTypeCode: 0
+  BusinessProcessType: 0
+  IsCustomProcessingStepAllowedForOtherPublishers: 1
+  ModernFlowType: 0
+  PrimaryEntity: none
+  LocalizedNames:
+    LocalizedName:
+    - '@languagecode': 1033
+      '@description': TEST | Power Platform Runtime Extensions | Byte Utilities
+    - '@languagecode': 1044
+      '@description': TEST | Power Platform Runtime Utvidelser | Byte Verktøy
