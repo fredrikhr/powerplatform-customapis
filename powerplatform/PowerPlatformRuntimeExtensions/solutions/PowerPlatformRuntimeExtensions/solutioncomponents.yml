@@ -1,5 +1,9 @@
 SolutionComponents:
   Component:
+  - '@path': /customapis/pwrplatf_CalculateCompoundLayoutUuidHashOutput
+  - '@path': /customapis/pwrplatf_CalculateCompoundLayoutUuidHashOutput/customapirequestparameters/LayoutType
+  - '@path': /customapis/pwrplatf_CalculateCompoundLayoutUuidHashOutput/customapirequestparameters/Name
+  - '@path': /customapis/pwrplatf_CalculateCompoundLayoutUuidHashOutput/customapiresponseproperties/HashOutput
   - '@path': /customapis/pwrplatf_ComputeHash
   - '@path': /customapis/pwrplatf_ComputeHash/customapirequestparameters/HashAlgorithmName
   - '@path': /customapis/pwrplatf_ComputeHash/customapirequestparameters/PayloadBase64
@@ -32,6 +36,10 @@ SolutionComponents:
   - '@path': /customapis/pwrplatf_GenerateRandomData/customapirequestparameters/NonZero
   - '@path': /customapis/pwrplatf_GenerateRandomData/customapiresponseproperties/DataBase64
   - '@path': /customapis/pwrplatf_GenerateRandomData/customapiresponseproperties/DataHexString
+  - '@path': /customapis/pwrplatf_GetCompoundLayoutUuidHashOutput
+  - '@path': /customapis/pwrplatf_GetCompoundLayoutUuidHashOutput/customapirequestparameters/LayoutType
+  - '@path': /customapis/pwrplatf_GetCompoundLayoutUuidHashOutput/customapirequestparameters/Name
+  - '@path': /customapis/pwrplatf_GetCompoundLayoutUuidHashOutput/customapiresponseproperties/HashOutput
   - '@path': /customapis/pwrplatf_GetRuntimeInformation
   - '@path': /customapis/pwrplatf_GetRuntimeInformation/customapiresponseproperties/ApiDiscovery
   - '@path': /customapis/pwrplatf_GetRuntimeInformation/customapiresponseproperties/Endpoints

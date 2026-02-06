@@ -1,0 +1,16 @@
+customapirequestparameter:
+  '@uniquename': Name
+  description:
+    '@default': Namespace within which the encoded values are valid.
+    label:
+      '@description': Namespace within which the encoded values are valid.
+      '@languagecode': 1033
+  displayname:
+    '@default': Name
+    label:
+      '@description': Name
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 0
+  name: pwrplatf_CalculateCompoundLayoutUuidHashOutput-In-Name
+  type: 10
