@@ -1,0 +1,122 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "dataverse": {
+        "impersonation": {
+          "source": "invoker"
+        },
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "test_pwrplatf_PowerPlatformRuntimeExtensions_Dataverse"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "Random_Data": {
+          "runAfter": {},
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "PerformUnboundAction",
+              "connectionName": "dataverse"
+            },
+            "parameters": {
+              "actionName": "pwrplatf_GenerateRandomData",
+              "item/ByteCount": 100
+            }
+          }
+        },
+        "Random_Base64Url": {
+          "runAfter": {
+            "Random_Data": [
+              "Succeeded"
+            ]
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "PerformUnboundAction",
+              "connectionName": "dataverse"
+            },
+            "parameters": {
+              "actionName": "pwrplatf_ConvertToBase64UrlString",
+              "item/Base64String": "@body('Random_Data')['DataBase64']"
+            }
+          }
+        },
+        "Random_Base64Url_Round-trip": {
+          "runAfter": {
+            "Random_Base64Url": [
+              "Succeeded"
+            ]
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "PerformUnboundAction",
+              "connectionName": "dataverse"
+            },
+            "parameters": {
+              "actionName": "pwrplatf_ConvertFromBase64UrlString",
+              "item/Base64UrlString": "@body('Random_Base64Url')['Base64UrlString']"
+            }
+          }
+        },
+        "Random_Base64Url_Round-trip_formatted": {
+          "runAfter": {
+            "Random_Base64Url": [
+              "Succeeded"
+            ]
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "PerformUnboundAction",
+              "connectionName": "dataverse"
+            },
+            "parameters": {
+              "actionName": "pwrplatf_ConvertFromBase64UrlString",
+              "item/Base64UrlString": "@body('Random_Base64Url')['Base64UrlString']",
+              "item/FormattingOptions": "InsertLineBreaks"
+            }
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

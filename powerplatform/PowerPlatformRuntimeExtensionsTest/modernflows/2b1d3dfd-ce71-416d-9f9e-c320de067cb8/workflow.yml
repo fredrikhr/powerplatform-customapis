@@ -1,7 +1,7 @@
 Workflow:
   '@WorkflowId': '{2b1d3dfd-ce71-416d-9f9e-c320de067cb8}'
   '@Name': TEST | Power Platform Runtime Extensions | Byte Utilities
-  JsonFileName: /modernflows/2b1d3dfd-ce71-416d-9f9e-c320de067cb8/workflow.json
+  JsonFileName: /modernflows/2b1d3dfd-ce71-416d-9f9e-c320de067cb8/TESTPowerPlatformRuntimeExtensionsByteUtilities-2B1D3DFD-CE71-416D-9F9E-C320DE067CB8.json
   Type: 1
   Subprocess: 0
   Category: 5
@@ -25,7 +25,5 @@ Workflow:
   PrimaryEntity: none
   LocalizedNames:
     LocalizedName:
-    - '@languagecode': 1033
+      '@languagecode': 1033
       '@description': TEST | Power Platform Runtime Extensions | Byte Utilities
-    - '@languagecode': 1044
-      '@description': TEST | Power Platform Runtime Utvidelser | Byte Verktøy

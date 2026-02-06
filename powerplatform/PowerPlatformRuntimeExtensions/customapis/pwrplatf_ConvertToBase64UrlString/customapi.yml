@@ -16,4 +16,6 @@ customapi:
   isfunction: 0
   isprivate: 0
   name: Convert to URL-safe Base64
+  plugintypeid:
+    plugintypeexportkey: 058165F3A8ACE1AD41073CE31B5F365814F684FA7553285CA9B8352285E3965A
   workflowsdkstepenabled: 0

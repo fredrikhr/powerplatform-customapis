@@ -25,7 +25,5 @@ Workflow:
   PrimaryEntity: none
   LocalizedNames:
     LocalizedName:
-    - '@languagecode': 1033
+      '@languagecode': 1033
       '@description': TEST | Power Platform Runtime Extensions | Runtime Information
-    - '@languagecode': 1044
-      '@description': TEST | Power Platform Runtime Utvidelser | Runtime Informasjon
