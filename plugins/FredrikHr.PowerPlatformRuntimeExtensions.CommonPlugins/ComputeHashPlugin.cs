@@ -55,10 +55,20 @@ public class ComputeHashPlugin : IPlugin
                 );
         }
 
+        using HashAlgorithm? hashProvider = HashAlgorithm.Create(hashName);
+#pragma warning disable CA1508 // Avoid dead conditional code
+        // hashProvider CAN be null
+        if (hashProvider is null)
+        {
+            throw new InvalidPluginExecutionException(
+                httpStatus: PluginHttpStatusCode.BadRequest,
+                message: $"Specified Hash Algorithm '{hashName}' is not a recognized Cryptographic Hash Algorithm. Consult https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.hashalgorithm.create?view=netframework-4.7.1#system-security-cryptography-hashalgorithm-create(system-string) for valid Hash algorithm names."
+                );
+        }
+#pragma warning restore CA1508 // Avoid dead conditional code
         byte[] hashBytes;
         try
         {
-            using var hashProvider = HashAlgorithm.Create(hashName);
             hashBytes = hashProvider.ComputeHash(payloadBytes);
         }
         catch (Exception hashingExcept)

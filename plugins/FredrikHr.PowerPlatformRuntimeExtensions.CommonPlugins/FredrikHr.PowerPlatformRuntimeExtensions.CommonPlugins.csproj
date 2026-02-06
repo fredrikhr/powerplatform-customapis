@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <PackageId>pwrplatf_RuntimeExtensionCommonPlugins</PackageId>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Description>No description provided.</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
