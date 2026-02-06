@@ -3,4 +3,5 @@ SolutionComponents:
   - '@path': /connectionreferences/test_pwrplatf_PowerPlatformRuntimeExtensions_Dataverse
   - '@path': /modernflows/2b1d3dfd-ce71-416d-9f9e-c320de067cb8
   - '@path': /modernflows/409fb493-b6c0-4661-bc5f-ac46aa083d06
+  - '@path': /modernflows/4ec70895-5e03-f111-8407-002248d75d2b
   - '@path': /publishers/fredrikhr

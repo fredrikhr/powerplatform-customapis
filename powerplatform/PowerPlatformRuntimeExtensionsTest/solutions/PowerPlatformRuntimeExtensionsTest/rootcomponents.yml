@@ -6,3 +6,6 @@ RootComponents:
   - '@type': 29
     '@id': '{409fb493-b6c0-4661-bc5f-ac46aa083d06}'
     '@behavior': 0
+  - '@type': 29
+    '@id': '{4ec70895-5e03-f111-8407-002248d75d2b}'
+    '@behavior': 0
