@@ -1,3 +1,5 @@
 SolutionComponents:
   Component:
-    '@path': /publishers/fredrikhr
+  - '@path': /connectionreferences/test_pwrplatf_PowerPlatformRuntimeExtensions_Dataverse
+  - '@path': /modernflows/409fb493-b6c0-4661-bc5f-ac46aa083d06
+  - '@path': /publishers/fredrikhr

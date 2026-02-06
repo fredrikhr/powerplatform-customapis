@@ -7,11 +7,11 @@
   "json.schemas": [
     {
       "fileMatch": ["powerplatform/**/modernflows/*/*.json"],
-      "url": "./.submodules/fredrikhr/powerplatform-sdk-extensions/schemas/modernflow-json/workflow-clientdata.json"
+      "url": "https://github.com/fredrikhr/powerplatform-sdk-extensions/raw/main/schemas/modernflow-json/workflow-clientdata.json"
     },
     {
       "fileMatch": ["powerplatform/**/connectors/*/*_openapidefinition.json"],
-      "url": "https://github.com/microsoft/PowerPlatformConnectors/raw/refs/heads/dev/schemas/apiDefinition.swagger.schema.json"
+      "url": "https://github.com/microsoft/PowerPlatformConnectors/raw/dev/schemas/apiDefinition.swagger.schema.json"
     }
   ]
 }

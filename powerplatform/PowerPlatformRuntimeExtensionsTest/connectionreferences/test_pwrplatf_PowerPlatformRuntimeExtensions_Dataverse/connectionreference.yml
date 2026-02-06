@@ -1,0 +1,6 @@
+connectionreference:
+  '@connectionreferencelogicalname': test_pwrplatf_PowerPlatformRuntimeExtensions_Dataverse
+  connectionreferencedisplayname: TEST | Power Platform Runtime Extensions | Dataverse
+  connectorid: /providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps
+  iscustomizable: 1
+  promptingbehavior: 0
