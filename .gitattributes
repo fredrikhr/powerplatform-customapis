@@ -1,6 +1,6 @@
 # Set the default behavior, in case people don't have core.autocrlf set.
-* text=auto
+* eol=crlf
 
-powerplatform/** text eol=crlf
-powerplatform/**/*.png binary
-powerplatform/**/*.nupkg binary
+*.png binary
+*.jpg binary
+*.nupkg binary
