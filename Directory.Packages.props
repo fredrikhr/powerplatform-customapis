@@ -35,8 +35,8 @@
     <PackageVersion Include="System.IO.Hashing">
       <Version>9.0.6</Version>
     </PackageVersion>
-    <PackageVersion Include="Microsoft.Bcl.Memory">
-      <Version>10.0.2</Version>
+    <PackageVersion Include="Microsoft.IdentityModel.Tokens">
+      <Version>8.14.0</Version>
     </PackageVersion>
   </ItemGroup>
 </Project>

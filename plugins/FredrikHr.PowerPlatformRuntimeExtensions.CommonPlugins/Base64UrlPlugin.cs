@@ -1,4 +1,4 @@
-using System.Buffers.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FredrikHr.PowerPlatformRuntimeExtensions.CommonPlugins;
 
@@ -44,7 +44,7 @@ public sealed class Base64UrlPlugin : IPlugin
             var _ => Convert.FromBase64String(base64String),
         };
 
-        string base64UrlString = Base64Url.EncodeToString(dataBytes);
+        string base64UrlString = Base64UrlEncoder.Encode(dataBytes);
         outputs[ParameterNames.Base64UrlString] = base64UrlString;
     }
 
@@ -58,7 +58,7 @@ public sealed class Base64UrlPlugin : IPlugin
         byte[] dataBytes = base64UrlString switch
         {
             null => [],
-            var _ => Base64Url.DecodeFromChars(base64UrlString.AsSpan()),
+            var _ => Base64UrlEncoder.DecodeBytes(base64UrlString),
         };
 
         string base64String =
