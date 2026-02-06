@@ -15,6 +15,13 @@ SolutionComponents:
   - '@path': /customapis/pwrplatf_ComputeNonCryptoHash/customapirequestparameters/PayloadText
   - '@path': /customapis/pwrplatf_ComputeNonCryptoHash/customapiresponseproperties/HashBase64
   - '@path': /customapis/pwrplatf_ComputeNonCryptoHash/customapiresponseproperties/HashHexString
+  - '@path': /customapis/pwrplatf_ConvertFromBase64UrlString
+  - '@path': /customapis/pwrplatf_ConvertFromBase64UrlString/customapirequestparameters/Base64UrlString
+  - '@path': /customapis/pwrplatf_ConvertFromBase64UrlString/customapirequestparameters/FormattingOptions
+  - '@path': /customapis/pwrplatf_ConvertFromBase64UrlString/customapiresponseproperties/Base64String
+  - '@path': /customapis/pwrplatf_ConvertToBase64UrlString
+  - '@path': /customapis/pwrplatf_ConvertToBase64UrlString/customapirequestparameters/Base64String
+  - '@path': /customapis/pwrplatf_ConvertToBase64UrlString/customapiresponseproperties/Base64UrlString
   - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid
   - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid/customapirequestparameters/CompoundUuid
   - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid/customapirequestparameters/LayoutType

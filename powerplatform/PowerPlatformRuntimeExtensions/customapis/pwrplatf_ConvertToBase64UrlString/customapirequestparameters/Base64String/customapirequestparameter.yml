@@ -1,0 +1,11 @@
+customapirequestparameter:
+  '@uniquename': Base64String
+  displayname:
+    '@default': Base64
+    label:
+      '@description': Base64
+      '@languagecode': 1033
+  iscustomizable: 1
+  isoptional: 0
+  name: pwrplatf_ConvertToBase64UrlString-In-Base64String
+  type: 10

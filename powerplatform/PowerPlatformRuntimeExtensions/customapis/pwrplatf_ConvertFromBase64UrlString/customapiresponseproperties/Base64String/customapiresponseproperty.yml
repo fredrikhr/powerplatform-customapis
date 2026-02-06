@@ -1,0 +1,10 @@
+customapiresponseproperty:
+  '@uniquename': Base64String
+  displayname:
+    '@default': Base64
+    label:
+      '@description': Base64
+      '@languagecode': 1033
+  iscustomizable: 1
+  name: pwrplatf_ConvertFromBase64UrlString-Out-Base64String
+  type: 10
