@@ -4,7 +4,7 @@ public sealed class UUIDv8CompoundDecodePlugin : IPlugin
 {
     internal static class InputParameterNames
     {
-        internal const string Value = nameof(Value);
+        internal const string CompoundUuid = nameof(CompoundUuid);
         internal const string LayoutType = nameof(LayoutType);
     }
 
@@ -20,7 +20,7 @@ public sealed class UUIDv8CompoundDecodePlugin : IPlugin
         ParameterCollection outputs = context.OutputParameters;
 
         var guid = context.InputParameterOrDefault<Guid>(
-            InputParameterNames.Value
+            InputParameterNames.CompoundUuid
             );
 
         Action<Guid, DataCollection<string, object>> decoder = inputs

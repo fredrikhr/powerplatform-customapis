@@ -24,7 +24,7 @@ public sealed class UUIDv5Plugin : IPlugin
     internal static class OutputParameterNames
     {
         internal const string NamespaceId = nameof(NamespaceId);
-        internal const string Value = nameof(Value);
+        internal const string Uuid = nameof(Uuid);
     }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
@@ -71,7 +71,7 @@ public sealed class UUIDv5Plugin : IPlugin
         { hashBytes = sha1.ComputeHash(hashInput); }
 
         outputs[OutputParameterNames.NamespaceId] = namespaceId;
-        outputs[OutputParameterNames.Value] =
+        outputs[OutputParameterNames.Uuid] =
             UuidHelper.CreateRfc9562Guid(hashBytes, 5);
     }
 }

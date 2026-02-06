@@ -12,21 +12,21 @@ SolutionComponents:
   - '@path': /customapis/pwrplatf_ComputeNonCryptoHash/customapiresponseproperties/HashBase64
   - '@path': /customapis/pwrplatf_ComputeNonCryptoHash/customapiresponseproperties/HashHexString
   - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid
+  - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid/customapirequestparameters/CompoundUuid
   - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid/customapirequestparameters/LayoutType
-  - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid/customapirequestparameters/Value
   - '@path': /customapis/pwrplatf_DecodeCompoundLayoutUuid/customapiresponseproperties/LayoutParameters
   - '@path': /customapis/pwrplatf_EncodeCompoundLayoutUuid
   - '@path': /customapis/pwrplatf_EncodeCompoundLayoutUuid/customapirequestparameters/LayoutParameters
   - '@path': /customapis/pwrplatf_EncodeCompoundLayoutUuid/customapirequestparameters/LayoutType
   - '@path': /customapis/pwrplatf_EncodeCompoundLayoutUuid/customapirequestparameters/Name
+  - '@path': /customapis/pwrplatf_EncodeCompoundLayoutUuid/customapiresponseproperties/CompoundUuid
   - '@path': /customapis/pwrplatf_EncodeCompoundLayoutUuid/customapiresponseproperties/HashOutput
-  - '@path': /customapis/pwrplatf_EncodeCompoundLayoutUuid/customapiresponseproperties/Value
   - '@path': /customapis/pwrplatf_GenerateNameBasedUuid
   - '@path': /customapis/pwrplatf_GenerateNameBasedUuid/customapirequestparameters/NameText
   - '@path': /customapis/pwrplatf_GenerateNameBasedUuid/customapirequestparameters/NamespaceId
   - '@path': /customapis/pwrplatf_GenerateNameBasedUuid/customapirequestparameters/WellKnownNamespace
   - '@path': /customapis/pwrplatf_GenerateNameBasedUuid/customapiresponseproperties/NamespaceId
-  - '@path': /customapis/pwrplatf_GenerateNameBasedUuid/customapiresponseproperties/Value
+  - '@path': /customapis/pwrplatf_GenerateNameBasedUuid/customapiresponseproperties/Uuid
   - '@path': /customapis/pwrplatf_GenerateRandomData
   - '@path': /customapis/pwrplatf_GenerateRandomData/customapirequestparameters/ByteCount
   - '@path': /customapis/pwrplatf_GenerateRandomData/customapirequestparameters/NonZero

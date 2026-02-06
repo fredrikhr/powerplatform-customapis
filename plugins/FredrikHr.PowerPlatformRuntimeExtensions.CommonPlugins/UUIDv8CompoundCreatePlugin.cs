@@ -12,7 +12,7 @@ public sealed class UUIDv8CompoundCreatePlugin : IPlugin
     internal static class OutputParameterNames
     {
         internal const string HashOutput = nameof(HashOutput);
-        internal const string Value = nameof(Value);
+        internal const string CompoundUuid = nameof(CompoundUuid);
     }
 
     public void Execute(IServiceProvider serviceProvider)
@@ -47,7 +47,7 @@ public sealed class UUIDv8CompoundCreatePlugin : IPlugin
 
         try
         {
-            outputs[OutputParameterNames.Value] =
+            outputs[OutputParameterNames.CompoundUuid] =
                 encoder(nameBytes, layoutParameters.Attributes);
         }
         catch (KeyNotFoundException missingParameterExcept)
