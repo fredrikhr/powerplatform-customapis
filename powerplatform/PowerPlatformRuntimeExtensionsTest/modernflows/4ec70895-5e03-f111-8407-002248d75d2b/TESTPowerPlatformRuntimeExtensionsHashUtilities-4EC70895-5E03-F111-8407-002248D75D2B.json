@@ -1,6 +1,19 @@
 {
   "properties": {
-    "connectionReferences": {},
+    "connectionReferences": {
+      "dataverse": {
+        "impersonation": {
+          "source": "invoker"
+        },
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "test_pwrplatf_PowerPlatformRuntimeExtensions_Dataverse"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
     "definition": {
       "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
       "contentVersion": "1.0.0.0",
@@ -8,13 +21,14 @@
         "$authentication": {
           "defaultValue": {},
           "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
         }
       },
       "triggers": {
         "manual": {
-          "metadata": {
-            "operationMetadataId": "276ac02c-1624-4163-953f-d51ee387cd4b"
-          },
           "type": "Request",
           "kind": "Button",
           "inputs": {
@@ -27,14 +41,20 @@
         }
       },
       "actions": {
-        "Current_time": {
+        "Random_Data": {
           "runAfter": {},
-          "metadata": {
-            "operationMetadataId": "fe3344c0-22f1-435b-98e6-c064dd224b54"
-          },
-          "type": "Expression",
-          "kind": "CurrentTime",
-          "inputs": {}
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "PerformUnboundAction",
+              "connectionName": "dataverse"
+            },
+            "parameters": {
+              "actionName": "pwrplatf_GenerateRandomData",
+              "item/ByteCount": 100
+            }
+          }
         }
       }
     },
