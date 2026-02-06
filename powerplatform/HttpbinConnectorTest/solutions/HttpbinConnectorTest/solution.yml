@@ -10,7 +10,7 @@ ImportExportXml:
       LocalizedName:
         '@description': TEST | Httpbin Custom Connector
         '@languagecode': 1033
-    Descriptions: 
+    Descriptions: null
     Version: 0.0.0
     Managed: 0
     Publisher:
