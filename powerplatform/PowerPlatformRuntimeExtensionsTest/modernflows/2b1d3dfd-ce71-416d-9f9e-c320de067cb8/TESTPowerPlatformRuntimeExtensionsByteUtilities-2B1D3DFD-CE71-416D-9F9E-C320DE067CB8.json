@@ -94,6 +94,17 @@
             }
           }
         },
+        "Round-trip_comparison": {
+          "runAfter": {
+            "Random_Base64Url_Round-trip": [
+              "Succeeded"
+            ]
+          },
+          "type": "Compose",
+          "inputs": {
+            "areEqual": "@equals(body('Random_Data')['DataBase64'], body('Random_Base64Url_Round-trip')['Base64String'])"
+          }
+        },
         "Random_Base64Url_Round-trip_formatted": {
           "runAfter": {
             "Random_Base64Url": [
@@ -113,6 +124,15 @@
               "item/FormattingOptions": "InsertLineBreaks"
             }
           }
+        },
+        "Base64_formatted": {
+          "runAfter": {
+            "Random_Base64Url_Round-trip_formatted": [
+              "Succeeded"
+            ]
+          },
+          "type": "Compose",
+          "inputs": "@body('Random_Base64Url_Round-trip_formatted')['Base64String']"
         }
       }
     },
