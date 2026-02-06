@@ -1,0 +1,19 @@
+customapi:
+  '@uniquename': pwrplatf_ConvertToBase64UrlString
+  allowedcustomprocessingsteptype: 0
+  bindingtype: 0
+  description:
+    '@default': Converts regular Base64 encoded data into URL-safe Base64 encoding
+    label:
+      '@description': Converts regular Base64 encoded data into URL-safe Base64 encoding
+      '@languagecode': 1033
+  displayname:
+    '@default': Convert to URL-safe Base64
+    label:
+      '@description': Convert to URL-safe Base64
+      '@languagecode': 1033
+  iscustomizable: 1
+  isfunction: 0
+  isprivate: 0
+  name: Convert to URL-safe Base64
+  workflowsdkstepenabled: 0

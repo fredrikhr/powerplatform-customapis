@@ -12,8 +12,8 @@ ImportExportXml:
         '@languagecode': 1033
       - '@description': Power Platform Runtime Utvidelser
         '@languagecode': 1044
-    Descriptions: 
-    Version: 1.4.0
+    Descriptions:
+    Version: 2.0.0
     Managed: 0
     Publisher:
       UniqueName: fredrikhr
