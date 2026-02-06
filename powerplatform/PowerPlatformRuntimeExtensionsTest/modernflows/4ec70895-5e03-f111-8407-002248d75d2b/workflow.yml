@@ -18,6 +18,7 @@ Workflow:
   IsTransacted: 1
   IntroducedVersion: 0.0.0
   IsCustomizable: 1
+  RendererObjectTypeCode: 0
   BusinessProcessType: 0
   IsCustomProcessingStepAllowedForOtherPublishers: 1
   ModernFlowType: 0

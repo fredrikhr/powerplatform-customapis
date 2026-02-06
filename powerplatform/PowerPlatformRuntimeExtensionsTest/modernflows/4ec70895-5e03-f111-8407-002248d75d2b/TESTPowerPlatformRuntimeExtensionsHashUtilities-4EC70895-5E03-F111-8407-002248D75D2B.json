@@ -45,63 +45,55 @@
           "runAfter": {},
           "type": "OpenApiConnection",
           "inputs": {
+            "parameters": {
+              "actionName": "pwrplatf_GenerateRandomData",
+              "item/ByteCount": 100
+            },
             "host": {
               "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
               "operationId": "PerformUnboundAction",
               "connectionName": "dataverse"
             },
-            "parameters": {
-              "actionName": "pwrplatf_GenerateRandomData",
-              "item/ByteCount": 100
-            },
             "retryPolicy": {
-              "type": "None"
+              "type": "none"
             }
           }
         },
         "Foreach_Cryptographic_Hash_algorithm": {
-          "runAfter": {
-            "Random_Data": [
-              "Succeeded"
-            ]
-          },
-          "type": "Foreach",
           "foreach": [
             "SHA1",
             "SHA256",
             "SHA384",
-            "SHA3_256",
             "MD5"
           ],
           "actions": {
             "Cryptographic_Hash": {
-              "runAfter": {},
               "type": "OpenApiConnection",
               "inputs": {
+                "parameters": {
+                  "actionName": "pwrplatf_ComputeHash",
+                  "item/PayloadBase64": "@body('Random_Data')['DataBase64']",
+                  "item/HashAlgorithmName": "@item()"
+                },
                 "host": {
                   "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
                   "operationId": "PerformUnboundAction",
                   "connectionName": "dataverse"
                 },
-                "parameters": {
-                  "actionName": "pwrplatf_ComputeHash",
-                  "item/HashAlgorithmName": "@item()",
-                  "item/PayloadBase64": "@body('Random_Data')['DataBase64']"
-                },
                 "retryPolicy": {
-                  "type": "None"
+                  "type": "none"
                 }
               }
             }
-          }
-        },
-        "Foreach_Non-Cryptographic_Hash_algorithm": {
+          },
           "runAfter": {
             "Random_Data": [
               "Succeeded"
             ]
           },
-          "type": "Foreach",
+          "type": "Foreach"
+        },
+        "Foreach_Non-Cryptographic_Hash_algorithm": {
           "foreach": [
             "Crc32",
             "Crc64",
@@ -112,25 +104,30 @@
           ],
           "actions": {
             "Non-Cryptographic_Hash": {
-              "runAfter": {},
               "type": "OpenApiConnection",
               "inputs": {
+                "parameters": {
+                  "actionName": "pwrplatf_ComputeNonCryptoHash",
+                  "item/PayloadBase64": "@body('Random_Data')['DataBase64']",
+                  "item/HashAlgorithmName": "@item()"
+                },
                 "host": {
                   "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
                   "operationId": "PerformUnboundAction",
                   "connectionName": "dataverse"
                 },
-                "parameters": {
-                  "actionName": "pwrplatf_ComputeNonCryptoHash",
-                  "item/HashAlgorithmName": "@item()",
-                  "item/PayloadBase64": "@body('Random_Data')['DataBase64']"
-                },
                 "retryPolicy": {
-                  "type": "None"
+                  "type": "none"
                 }
               }
             }
-          }
+          },
+          "runAfter": {
+            "Random_Data": [
+              "Succeeded"
+            ]
+          },
+          "type": "Foreach"
         },
         "Text_Sample": {
           "runAfter": {},
@@ -138,12 +135,6 @@
           "inputs": "https://make.powerautomate.com/environments/@{workflow().tags.environmentName}/flows/@{workflow().name}/runs/@{workflow().run.name}"
         },
         "Foreach_textual_Non-Cryptographic_Hash_algorithm": {
-          "runAfter": {
-            "Text_Sample": [
-              "Succeeded"
-            ]
-          },
-          "type": "Foreach",
           "foreach": [
             "Crc32",
             "Crc64",
@@ -154,25 +145,30 @@
           ],
           "actions": {
             "Non-Cryptographic_Hash_over_text": {
-              "runAfter": {},
               "type": "OpenApiConnection",
               "inputs": {
-                "host": {
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
-                  "operationId": "PerformUnboundAction",
-                  "connectionName": "dataverse"
-                },
                 "parameters": {
                   "actionName": "pwrplatf_ComputeNonCryptoHash",
                   "item/HashAlgorithmName": "@item()",
                   "item/PayloadText": "@outputs('Text_Sample')"
                 },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "PerformUnboundAction",
+                  "connectionName": "dataverse"
+                },
                 "retryPolicy": {
-                  "type": "None"
+                  "type": "none"
                 }
               }
             }
-          }
+          },
+          "runAfter": {
+            "Text_Sample": [
+              "Succeeded"
+            ]
+          },
+          "type": "Foreach"
         }
       }
     },
