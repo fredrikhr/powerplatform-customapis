@@ -98,6 +98,9 @@
 *.zip      binary
 *.zst      binary
 
+# Packages
+*.nupkg	   binary
+
 # Text files where line endings should be preserved
 *.patch    -text
 
