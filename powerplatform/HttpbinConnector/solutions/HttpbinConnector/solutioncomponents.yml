@@ -1,4 +1,0 @@
-SolutionComponents:
-  Component:
-  - '@path': /connectors/httpbin_httpbinorg
-  - '@path': /publishers/fredrikhr

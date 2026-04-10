@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="MaxDepth">
+  <description default="The maximum depth allowed when parsing JSON data">
+    <label description="The maximum depth allowed when parsing JSON data" languagecode="1033" />
+  </description>
+  <displayname default="Max Depth">
+    <label description="Max Depth" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>pwrplatf_InspectJson-In-MaxDepth</name>
+  <type>7</type>
+</customapirequestparameter>

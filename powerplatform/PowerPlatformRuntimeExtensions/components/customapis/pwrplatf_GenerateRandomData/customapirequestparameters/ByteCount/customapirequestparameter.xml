@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="ByteCount">
+  <description default="The number of bytes to generate">
+    <label description="The number of bytes to generate" languagecode="1033" />
+  </description>
+  <displayname default="Length">
+    <label description="Length" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>pwrplatf_GenerateRandomData-In-ByteCount</name>
+  <type>7</type>
+</customapirequestparameter>

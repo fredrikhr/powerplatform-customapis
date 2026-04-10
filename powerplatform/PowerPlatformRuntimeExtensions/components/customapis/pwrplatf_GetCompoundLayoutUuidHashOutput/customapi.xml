@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_GetCompoundLayoutUuidHashOutput">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Gets the expected Hash Output parameter encoded into a compound UUID version 8 value.">
+    <label description="Gets the expected Hash Output parameter encoded into a compound UUID version 8 value." languagecode="1033" />
+  </description>
+  <displayname default="Get compound layout UUID Hash Output">
+    <label description="Get compound layout UUID Hash Output" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>1</isfunction>
+  <isprivate>0</isprivate>
+  <name>Get compound layout UUID Hash Output</name>
+  <plugintypeid>
+    <plugintypeexportkey>17139213FFB95891E3077756B91E14EAD0EB8F9151C7A86009575E37BE9473B8</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

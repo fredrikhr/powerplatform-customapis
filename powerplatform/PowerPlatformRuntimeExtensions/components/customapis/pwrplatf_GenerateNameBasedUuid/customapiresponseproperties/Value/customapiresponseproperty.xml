@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Value">
+  <description default="The generated UUID version 5 value">
+    <label description="The generated UUID version 5 value" languagecode="1033" />
+  </description>
+  <displayname default="UUID">
+    <label description="UUID" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_GenerateNameBasedUuid-Out-Value</name>
+  <type>12</type>
+</customapiresponseproperty>

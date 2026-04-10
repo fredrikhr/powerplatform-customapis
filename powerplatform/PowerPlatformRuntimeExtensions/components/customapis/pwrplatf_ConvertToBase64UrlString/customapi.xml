@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_ConvertToBase64UrlString">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Converts regular Base64 encoded data into URL-safe Base64 encoding">
+    <label description="Converts regular Base64 encoded data into URL-safe Base64 encoding" languagecode="1033" />
+  </description>
+  <displayname default="Convert to URL-safe Base64">
+    <label description="Convert to URL-safe Base64" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Convert to URL-safe Base64</name>
+  <plugintypeid>
+    <plugintypeexportkey>058165F3A8ACE1AD41073CE31B5F365814F684FA7553285CA9B8352285E3965A</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="PayloadBase64">
+  <description default="Base64 encoded payload to hash">
+    <label description="Base64 encoded payload to hash" languagecode="1033" />
+  </description>
+  <displayname default="Payload">
+    <label description="Payload" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>pwrplatf_ComputeHash-In-PayloadBase64</name>
+  <type>10</type>
+</customapirequestparameter>

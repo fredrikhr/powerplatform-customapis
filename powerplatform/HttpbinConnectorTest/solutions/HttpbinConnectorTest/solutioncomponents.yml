@@ -1,5 +1,0 @@
-SolutionComponents:
-  Component:
-  - '@path': /connectionreferences/test_httpbin_httpbinorg
-  - '@path': /modernflows/edc5ce5c-e592-f011-b4cc-7c1e52606563
-  - '@path': /publishers/fredrikhr

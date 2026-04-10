@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="PropertyNames">
+  <description default="The names of the properties contained in the root element object of the JSON document.">
+    <label description="The names of the properties contained in the root element object of the JSON document." languagecode="1033" />
+  </description>
+  <displayname default="Property names">
+    <label description="Property names" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_InspectJson-Out-PropertyNames</name>
+  <type>11</type>
+</customapiresponseproperty>

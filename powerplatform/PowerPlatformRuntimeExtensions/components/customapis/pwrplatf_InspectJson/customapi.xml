@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_InspectJson">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Analyses a JSON payload and provides information about the root element.">
+    <label description="Analyses a JSON payload and provides information about the root element." languagecode="1033" />
+  </description>
+  <displayname default="Inspect JSON">
+    <label description="Inspect JSON" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Inspect JSON</name>
+  <plugintypeid>
+    <plugintypeexportkey>AE2662624B899E6A9A951CDABFE0711E88704D9FB4EE9724F57E59ACD26E969D</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

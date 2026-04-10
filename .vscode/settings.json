@@ -6,12 +6,50 @@
   "dotnet.defaultSolution": "Power Platform Extras.slnx",
   "json.schemas": [
     {
-      "fileMatch": ["powerplatform/**/modernflows/*/*.json"],
-      "url": "https://github.com/fredrikhr/powerplatform-sdk-extensions/raw/main/schemas/modernflow-json/workflow-clientdata.json"
+      "fileMatch": ["{powerplatform,powerplatform-test}/*/components/Workflows/*.json"],
+      "url": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/modernflow-json/workflow-clientdata.json"
     },
     {
-      "fileMatch": ["powerplatform/**/connectors/*/*_openapidefinition.json"],
-      "url": "https://github.com/microsoft/PowerPlatformConnectors/raw/dev/schemas/apiDefinition.swagger.schema.json"
+      "fileMatch": ["{powerplatform,powerplatform-test}/*/components/Connectors/*_openapidefinition.json"],
+      "url": "https://github.com/OAI/OpenAPI-Specification/raw/refs/heads/main/_archive_/schemas/v2.0/schema.json"
+    }
+  ],
+  "xml.format.preserveAttributeLineBreaks": true,
+  "xml.format.splitAttributes": "preserve",
+  "xml.format.spaceBeforeEmptyCloseTag": true,
+  "xml.format.closingBracketNewLine": true,
+  "xml.fileAssociations": [
+    {
+      "pattern": "**/*.slnx",
+      "systemId": "https://github.com/microsoft/vs-solutionpersistence/raw/refs/heads/main/src/Microsoft.VisualStudio.SolutionPersistence/Serializer/Xml/Slnx.xsd"
+    },
+    {
+      "pattern": "{powerplatform,powerplatform-test}/*/components/Other/{Customizations,Solution}.xml",
+      "systemId": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/dynamics365ce-xsd/CustomizationsSolution.xsd"
+    },
+    {
+      "pattern": "{powerplatform,powerplatform-test}/*/components/Entities/*/Entity.xml",
+      "systemId": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/dynamics365ce-xsd/Entity.xsd"
+    },
+    {
+      "pattern": "{powerplatform,powerplatform-test}/*/components/Entities/*/FormXml/*/*.xml",
+      "systemId": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/dynamics365ce-xsd/FormXmlSystemforms.xsd"
+    },
+    {
+      "pattern": "{powerplatform,powerplatform-test}/*/components/Entities/*/SavedQueries/*.xml",
+      "systemId": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/dynamics365ce-xsd/SavedQueries.xsd"
+    },
+    {
+      "pattern": "{powerplatform,powerplatform-test}/*/components/environmentvariabledefinitions/*/environmentvariabledefinition.xml",
+      "systemId": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/dynamics365ce-xsd/EnvironmentVariableDefinition.xsd"
+    },
+    {
+      "pattern": "{powerplatform,powerplatform-test}/*/components/pluginpackages/*/pluginpackage.xml",
+      "systemId": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/dynamics365ce-xsd/PluginPackage.xsd"
+    },
+    {
+      "pattern": "{powerplatform,powerplatform-test}/*/components/Workflows/*.data.xml",
+      "systemId": ".submodules/fredrikhr/powerplatform-sdk-extensions/schemas/dynamics365ce-xsd/Workflow.xsd"
     }
   ]
 }

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="HashHexString">
+  <description default="The result of the hash computation encoded as a string of hexadecimal digits.">
+    <label description="The result of the hash computation encoded as a string of hexadecimal digits." languagecode="1033" />
+  </description>
+  <displayname default="Hash Hex-String">
+    <label description="Hash Hex-String" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_ComputeHash-Out-HashHexString</name>
+  <type>10</type>
+</customapiresponseproperty>

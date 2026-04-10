@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="WhoAmIDetails">
+  <description default="Detailed information on the identity of the executing user.">
+    <label description="Detailed information on the identity of the executing user." languagecode="1033" />
+  </description>
+  <displayname default="Who Am I Details">
+    <label description="Who Am I Details" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_GetRuntimeInformation-Out-WhoAmIDetails</name>
+  <type>3</type>
+</customapiresponseproperty>

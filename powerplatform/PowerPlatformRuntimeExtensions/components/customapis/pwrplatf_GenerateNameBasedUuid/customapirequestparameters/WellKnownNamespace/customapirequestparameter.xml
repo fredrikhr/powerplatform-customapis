@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="WellKnownNamespace">
+  <description default="The name of one of the well-known IANA registered namespaces listed in RFC9562, section 6.6">
+    <label description="The name of one of the well-known IANA registered namespaces listed in RFC9562, section 6.6" languagecode="1033" />
+  </description>
+  <displayname default="Well-known Namespace">
+    <label description="Well-known Namespace" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>pwrplatf_GenerateNameBasedUuid-In-WellKnownNamespace</name>
+  <type>10</type>
+</customapirequestparameter>

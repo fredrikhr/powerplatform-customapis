@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="LayoutParameters">
+  <description default="An Entity containing the values to encode.">
+    <label description="An Entity containing the values to encode." languagecode="1033" />
+  </description>
+  <displayname default="Layout parameters">
+    <label description="Layout parameters" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>pwrplatf_EncodeCompoundLayoutUuid-In-LayoutParameters</name>
+  <type>3</type>
+</customapirequestparameter>

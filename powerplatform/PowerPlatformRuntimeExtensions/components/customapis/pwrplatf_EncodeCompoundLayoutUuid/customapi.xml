@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_EncodeCompoundLayoutUuid">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Encodes one or more integer values into a custom layout UUID version 8 value.">
+    <label description="Encodes one or more integer values into a custom layout UUID version 8 value." languagecode="1033" />
+  </description>
+  <displayname default="Encode compound layout UUID">
+    <label description="Encode compound layout UUID" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Encode compound layout UUID</name>
+  <plugintypeid>
+    <plugintypeexportkey>9B65C0195B3B5509E2D5BEA3738488C35BDB405D99DA1F08647E9D77201805C5</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

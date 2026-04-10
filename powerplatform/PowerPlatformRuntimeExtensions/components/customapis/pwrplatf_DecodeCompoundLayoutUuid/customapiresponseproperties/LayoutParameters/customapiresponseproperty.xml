@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="LayoutParameters">
+  <description default="An Entity containing the decoded values with additional information.">
+    <label description="An Entity containing the decoded values with additional information." languagecode="1033" />
+  </description>
+  <displayname default="Layout parameters">
+    <label description="Layout parameters" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_DecodeCompoundLayoutUuid-Out-LayoutParameters</name>
+  <type>3</type>
+</customapiresponseproperty>

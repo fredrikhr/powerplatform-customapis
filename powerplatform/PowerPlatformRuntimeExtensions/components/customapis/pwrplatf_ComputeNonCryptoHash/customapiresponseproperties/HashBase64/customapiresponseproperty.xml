@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="HashBase64">
+  <description default="Base64 encoded hash computation result">
+    <label description="Base64 encoded hash computation result" languagecode="1033" />
+  </description>
+  <displayname default="Hash Result">
+    <label description="Hash Result" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>pwrplatf_ComputeNonCryptoHash-Out-HashBase64</name>
+  <type>10</type>
+</customapiresponseproperty>

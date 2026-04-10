@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="JsonString">
+  <description default="A stringified JSON Document">
+    <label description="A stringified JSON Document" languagecode="1033" />
+  </description>
+  <displayname default="JSON String">
+    <label description="JSON String" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>pwrplatf_TransformJsonArrayToLookup-In-JsonString</name>
+  <type>10</type>
+</customapirequestparameter>

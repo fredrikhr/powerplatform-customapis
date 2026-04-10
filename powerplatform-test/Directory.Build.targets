@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+
+  <!-- Import Directory.Build file from sibling directory -->
+  <PropertyGroup>
+    <MSBuildAllProjects>
+      $(MSBuildAllProjects);$(MSBuildThisFileDirectory)..\powerplatform\$(MSBuildThisFileName)$(MSBuildThisFileExtension)</MSBuildAllProjects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\powerplatform\$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
+
+</Project>

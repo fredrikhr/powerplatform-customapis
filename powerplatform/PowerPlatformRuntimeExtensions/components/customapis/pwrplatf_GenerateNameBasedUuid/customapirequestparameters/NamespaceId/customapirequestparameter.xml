@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="NamespaceId">
+  <description default="The namespace within which the name is (probably) unique.">
+    <label description="The namespace within which the name is (probably) unique." languagecode="1033" />
+  </description>
+  <displayname default="Custom Namespace ID">
+    <label description="Custom Namespace ID" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>pwrplatf_GenerateNameBasedUuid-In-NamespaceId</name>
+  <type>12</type>
+</customapirequestparameter>

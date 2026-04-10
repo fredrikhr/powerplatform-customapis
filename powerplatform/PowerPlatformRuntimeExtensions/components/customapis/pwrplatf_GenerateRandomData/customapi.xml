@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_GenerateRandomData">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Generates random data of specified size using a cryptographic random number generator">
+    <label description="Generates random data of specified size using a cryptographic random number generator" languagecode="1033" />
+  </description>
+  <displayname default="Generate Random Data">
+    <label description="Generate Random Data" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Generate Random Data</name>
+  <plugintypeid>
+    <plugintypeexportkey>552136EFA95EFFF566F045F1B23CF3D5F35B4862397B57D56FFCEDCC32CA39C1</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

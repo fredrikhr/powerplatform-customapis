@@ -20,17 +20,11 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
-    <RestoreAdditionalProjectFallbackFolders Condition="Exists('$(MSBuildThisFileDirectory)packages')">
-      $(MSBuildThisFileDirectory)packages;
-    </RestoreAdditionalProjectFallbackFolders>
-    <RestoreAdditionalProjectFallbackFolders Condition="Exists('$(MSBuildThisFileDirectory).submodules\fredrikhr\nuget-msbuild-extensions\packages')">
-      $(RestoreAdditionalProjectFallbackFolders);
-      $(MSBuildThisFileDirectory).submodules\fredrikhr\nuget-msbuild-extensions\packages
-    </RestoreAdditionalProjectFallbackFolders>
+    <RestoreAdditionalProjectFallbackFolders>$(MSBuildThisFileDirectory)packages</RestoreAdditionalProjectFallbackFolders>
   </PropertyGroup>
 
   <PropertyGroup>
-    <LangVersion>13</LangVersion>
+    <LangVersion>14</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>

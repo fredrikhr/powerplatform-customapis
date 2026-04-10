@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Indented">
+  <description default="Whether to output the result as indented JSON">
+    <label description="Whether to output the result as indented JSON" languagecode="1033" />
+  </description>
+  <displayname default="Indented output">
+    <label description="Indented output" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>pwrplatf_TransformJsonArrayToLookup-In-Indented</name>
+  <type>0</type>
+</customapirequestparameter>

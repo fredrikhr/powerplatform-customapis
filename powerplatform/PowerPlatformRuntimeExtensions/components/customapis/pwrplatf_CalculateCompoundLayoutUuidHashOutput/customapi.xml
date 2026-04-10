@@ -1,0 +1,18 @@
+<customapi uniquename="pwrplatf_CalculateCompoundLayoutUuidHashOutput">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Calculates the expected Hash Output parameter encoded into a compound UUID version 8 value.">
+    <label description="Calculates the expected Hash Output parameter encoded into a compound UUID version 8 value." languagecode="1033" />
+  </description>
+  <displayname default="Calculate compound layout UUID Hash Output">
+    <label description="Calculate compound layout UUID Hash Output" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Calculate compound layout UUID Hash Output</name>
+  <plugintypeid>
+    <plugintypeexportkey>17139213FFB95891E3077756B91E14EAD0EB8F9151C7A86009575E37BE9473B8</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

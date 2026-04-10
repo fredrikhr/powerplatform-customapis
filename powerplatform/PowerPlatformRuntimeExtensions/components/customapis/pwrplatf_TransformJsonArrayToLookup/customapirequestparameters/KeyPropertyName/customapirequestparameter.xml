@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="KeyPropertyName">
+  <description default="The name of the property used for the lookup key for each element.">
+    <label description="The name of the property used for the lookup key for each element." languagecode="1033" />
+  </description>
+  <displayname default="Key Property Name">
+    <label description="Key Property Name" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>pwrplatf_TransformJsonArrayToLookup-In-KeyPropertyName</name>
+  <type>10</type>
+</customapirequestparameter>
