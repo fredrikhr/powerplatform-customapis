@@ -1,9 +1,0 @@
-<customapirequestparameter uniquename="Base64UrlString">
-  <displayname default="URL-safe Base64">
-    <label description="URL-safe Base64" languagecode="1033" />
-  </displayname>
-  <iscustomizable>1</iscustomizable>
-  <isoptional>0</isoptional>
-  <name>pwrplatf_ConvertFromBase64UrlString-In-Base64UrlString</name>
-  <type>10</type>
-</customapirequestparameter>

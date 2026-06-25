@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="Base64String">
+  <displayname default="Base64">
+    <label description="Base64" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>Base64String</name>
+  <type>10</type>
+</customapirequestparameter>

@@ -1,8 +1,0 @@
-<customapiresponseproperty uniquename="Base64UrlString">
-  <displayname default="Base64">
-    <label description="Base64" languagecode="1033" />
-  </displayname>
-  <iscustomizable>1</iscustomizable>
-  <name>pwrplatf_ConvertToBase64UrlString-Out-Base64UrlString</name>
-  <type>10</type>
-</customapiresponseproperty>

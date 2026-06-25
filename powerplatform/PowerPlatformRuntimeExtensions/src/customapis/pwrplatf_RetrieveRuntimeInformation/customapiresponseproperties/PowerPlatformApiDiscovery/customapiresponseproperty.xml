@@ -1,0 +1,13 @@
+<customapiresponseproperty uniquename="PowerPlatformApiDiscovery">
+  <description default="Power Platform API Discovery information.">
+    <label description="Power Platform API Discovery information." languagecode="1033" />
+    <label description="Power Platform API endepunkt." languagecode="1044" />
+  </description>
+  <displayname default="Power Platform API Discovery">
+    <label description="Power Platform API Discovery" languagecode="1033" />
+    <label description="Power Platform API Endepunkt" languagecode="1044" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>PowerPlatformApiDiscovery</name>
+  <type>3</type>
+</customapiresponseproperty>

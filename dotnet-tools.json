@@ -3,7 +3,7 @@
   "isRoot": true,
   "tools": {
     "microsoft.powerapps.cli.tool": {
-      "version": "2.5.1",
+      "version": "2.8.1",
       "commands": [
         "pac"
       ],

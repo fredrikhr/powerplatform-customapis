@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="FormattingOptions">
+  <description default="A named value from the .NET System.Base64FormattingOptions Enum type">
+    <label description="A named value from the .NET System.Base64FormattingOptions Enum type" languagecode="1033" />
+  </description>
+  <displayname default="Formatting Options">
+    <label description="Formatting Options" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>FormattingOptions</name>
+  <type>10</type>
+</customapirequestparameter>

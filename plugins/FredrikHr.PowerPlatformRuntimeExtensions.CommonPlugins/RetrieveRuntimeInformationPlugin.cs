@@ -13,8 +13,8 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         public const string EnvironmentInfo = nameof(EnvironmentInfo);
         public const string WhoAmIDetails = nameof(WhoAmIDetails);
         public const string OrganizationDetails = nameof(OrganizationDetails);
-        public const string Endpoints = nameof(OrganizationDetail.Endpoints);
-        public const string ApiDiscovery = nameof(ApiDiscovery);
+        public const string DataverseEndpoints = nameof(DataverseEndpoints);
+        public const string PowerPlatformApiDiscovery = nameof(PowerPlatformApiDiscovery);
     }
 
     private static readonly HashSet<string> KnownAssemblyNames = new([
@@ -89,48 +89,28 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
     public void Execute(IServiceProvider serviceProvider)
     {
         var context = serviceProvider.Get<IPluginExecutionContext7>();
+        var envInfo = serviceProvider.Get<IEnvironmentService>();
         ParameterCollection outputs = context.OutputParameters;
         _trace = serviceProvider.Get<ITracingService>();
         var orgService = serviceProvider.GetOrganizationService(context.UserId);
 
         outputs[OutputParameterNames.EnvironmentInfo] =
-            GetEnvironmentInfo(serviceProvider, out string? clusterCategoryName);
+            GetEnvironmentInfo(envInfo);
         outputs[OutputParameterNames.WhoAmIDetails] =
             GetWhoAmIExtendedInfo(context);
         outputs[OutputParameterNames.OrganizationDetails] =
             GetOrganizationDetails(orgService, out Entity endpointsEntity);
-        outputs[OutputParameterNames.Endpoints] = endpointsEntity;
-        outputs[OutputParameterNames.ApiDiscovery] =
-            GetApiDiscovery(context, clusterCategoryName);
+        outputs[OutputParameterNames.DataverseEndpoints] = endpointsEntity;
+        outputs[OutputParameterNames.PowerPlatformApiDiscovery] = GetApiDiscovery(context, envInfo);
     }
 
-    private static Entity GetEnvironmentInfo(IServiceProvider serviceProvider, out string? clusterCategory)
+    private static Entity GetEnvironmentInfo(IEnvironmentService envInfo)
     {
-        var envInfo = serviceProvider.Get<IEnvironmentService>();
         Entity envDetails = new();
-        WriteToEntity(envDetails, envInfo);
-        WriteToEntityInternal(envDetails, serviceProvider.Get<IInternalEnvironmentService>(), out clusterCategory);
+        envDetails[nameof(envInfo.AzureAuthorityHost)] = envInfo.AzureAuthorityHost?.ToString();
+        envDetails[nameof(envInfo.AzureRegionName)] = envInfo.AzureRegionName;
+        envDetails[nameof(envInfo.Geo)] = envInfo.Geo;
         return envDetails;
-
-        static void WriteToEntity(Entity e, IEnvironmentService envInfo)
-        {
-            e[nameof(envInfo.AzureAuthorityHost)] = envInfo.AzureAuthorityHost?.ToString();
-            e[nameof(envInfo.AzureRegionName)] = envInfo.AzureRegionName;
-            e[nameof(envInfo.Geo)] = envInfo.Geo;
-        }
-
-        static void WriteToEntityInternal(Entity e, IInternalEnvironmentService? envInfo, out string? clusterCategory)
-        {
-            if (envInfo is null)
-            {
-                clusterCategory = null;
-                return;
-            }
-
-            WriteToEntity(e, envInfo);
-            e[nameof(envInfo.ClusterCategory)] = clusterCategory =
-                envInfo.ClusterCategory;
-        }
     }
 
     private static Entity GetWhoAmIExtendedInfo(IPluginExecutionContext7 context)
@@ -198,19 +178,19 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
 
     private static Entity GetApiDiscovery(
         IPluginExecutionContext7 context,
-        string? clusterCategoryName
+        IEnvironmentService envInfo
         )
     {
         Entity entity = new();
-        var apiDiscovery = PowerPlatformApiDiscovery
-            .FromClusterCategoryName(clusterCategoryName);
+        var apiDiscovery = new PowerPlatformApiDiscovery(context, envInfo);
         entity[nameof(apiDiscovery.TokenAudience)] = apiDiscovery.TokenAudience;
         entity[nameof(apiDiscovery.GlobalEndpoint)] = apiDiscovery.GlobalEndpoint;
         entity[nameof(apiDiscovery.GlobalUserContentEndpoint)] = apiDiscovery.GlobalUserContentEndpoint;
-        entity["TenantEndpoint"] = apiDiscovery.GetTenantEndpoint(context.TenantId);
-        entity["OrganizationEndpoint"] = apiDiscovery.GetOrganizationEndpoint(context.OrganizationId);
-        entity["EnvironmentEndpoint"] = apiDiscovery.GetEnvironmentEndpoint(context.EnvironmentId);
-        entity["EnvironmentUserContentEndpoint"] = apiDiscovery.GetEnvironmentUserContentEndpoint(context.EnvironmentId);
+        entity[nameof(apiDiscovery.TenantEndpoint)] = apiDiscovery.TenantEndpoint;
+        entity[nameof(apiDiscovery.TenantIslandClusterEndpoint)] = apiDiscovery.TenantIslandClusterEndpoint;
+        entity[nameof(apiDiscovery.EnvironmentEndpoint)] = apiDiscovery.EnvironmentEndpoint;
+        entity[nameof(apiDiscovery.EnvironmentUserContentEndpoint)] = apiDiscovery.EnvironmentUserContentEndpoint;
+        entity[nameof(apiDiscovery.OrganizationEndpoint)] = apiDiscovery.OrganizationEndpoint;
         return entity;
     }
 }

@@ -13,13 +13,13 @@
     <TargetFramework>net471</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-    <SolutionRootPath>components</SolutionRootPath>
+    <SolutionRootPath>src</SolutionRootPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution">
       <PrivateAssets>all</PrivateAssets>
-      <ProjectReference>$(MSBuildThisFileDirectory)..\.submodules\fredrikhr\powerplatform-sdk-extensions\build\FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution\FredrikHr.PowerPlatformSdkExtensions.MSBuild.Solution.csproj</ProjectReference>
+      <ProjectReference>$(MSBuildThisFileDirectory)..\.submodules\fredrikhr\powerplatform-sdk-extensions\build\%(Identity)\%(Identity).csproj</ProjectReference>
     </PackageReference>
   </ItemGroup>
 

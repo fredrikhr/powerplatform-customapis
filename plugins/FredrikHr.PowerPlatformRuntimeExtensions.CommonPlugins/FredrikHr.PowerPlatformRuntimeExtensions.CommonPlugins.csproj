@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <PackageId>pwrplatf_RuntimeExtensionCommonPlugins</PackageId>
-    <Version>2.0.1</Version>
+    <Version>3.0.0</Version>
     <Description>No description provided.</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -13,26 +13,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FredrikHr.NupkgMSBuild.PackPackageReference">
-      <PrivateAssets>all</PrivateAssets>
-      <ProjectReference>$(MSBuildThisFileDirectory)..\..\.submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\FredrikHr.NupkgMSBuild.PackPackageReference\FredrikHr.NupkgMSBuild.PackPackageReference.csproj</ProjectReference>
+    <PackageReference
+      Include="
+        FredrikHr.NupkgMSBuild.PackPackageReference;
+        FredrikHr.NupkgMSBuild.PackProjectReference;
+        "
+      PrivateAssets="all"
+    >
+      <ProjectReference>$(MSBuildThisFileDirectory)..\..\.submodules\fredrikhr\powerplatform-sdk-extensions\.submodules\fredrikhr\nuget-msbuild-extensions\build\%(Identity)\%(Identity).csproj</ProjectReference>
     </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CoreFramework.CapCoreServices.TopologyModel, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <HintPath>..\..\bld\dataversesandboxworker\CoreFramework.CapCoreServices.TopologyModel.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
-    <Reference Include="Microsoft.Xrm.Kernel.Contracts.Internal, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <HintPath>..\..\bld\dataversesandboxworker\Microsoft.Xrm.Kernel.Contracts.Internal.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
     <PackageReference Include="Microsoft.IdentityModel.Tokens" PrivateAssets="all" />
+    <PackageReference Include="System.IO.Hashing" Pack="true" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.IO.Hashing" Pack="true" PrivateAssets="all" />
+    <ProjectReference Include="..\..\.submodules\fredrikhr\powerplatform-sdk-extensions\libraries\FredrikHr.PowerPlatformSdkExtensions.ApiDiscovery\FredrikHr.PowerPlatformSdkExtensions.ApiDiscovery.csproj">
+      <Pack>true</Pack>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

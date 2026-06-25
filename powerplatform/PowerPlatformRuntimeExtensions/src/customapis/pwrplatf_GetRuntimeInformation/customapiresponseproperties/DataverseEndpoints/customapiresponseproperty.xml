@@ -1,0 +1,13 @@
+<customapiresponseproperty uniquename="DataverseEndpoints">
+  <description default="Information on Dataverse endpoints.">
+    <label description="Information on Dataverse endpoints." languagecode="1033" />
+    <label description="Informasjon om Dataverse endepunkt." languagecode="1044" />
+  </description>
+  <displayname default="Dataverse Endpoints">
+    <label description="Dataverse Endpoints" languagecode="1033" />
+    <label description="Dataverse Endepunkt" languagecode="1044" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DataverseEndpoints</name>
+  <type>3</type>
+</customapiresponseproperty>
