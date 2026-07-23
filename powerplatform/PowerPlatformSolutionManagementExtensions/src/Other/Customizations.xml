@@ -11,16 +11,7 @@
   <optionsets />
   <CustomControls />
   <EntityDataProviders />
-  <connectionreferences>
-    <connectionreference connectionreferencelogicalname="pwrplatf_SolutionManagementDataverse">
-      <connectionreferencedisplayname>Solution Management Dataverse Connection</connectionreferencedisplayname>
-      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
-      <iscustomizable>1</iscustomizable>
-      <promptingbehavior>0</promptingbehavior>
-      <statecode>0</statecode>
-      <statuscode>1</statuscode>
-    </connectionreference>
-  </connectionreferences>
+  <connectionreferences></connectionreferences>
   <Languages>
     <Language>1033</Language>
     <Language>1044</Language>
