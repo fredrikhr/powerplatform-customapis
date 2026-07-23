@@ -153,6 +153,158 @@
         "clear": true
       }
     },
+    // powerplatform/PowerPlatformSolutionManagementExtensions
+    {
+      "label": "PowerPlatformSolutionManagementExtensions | Build solution (Unmanaged)",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Debug",
+        "powerplatform/PowerPlatformSolutionManagementExtensions"
+      ],
+      "dependsOn": [],
+      "problemMatcher": "$msCompile",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformSolutionManagementExtensions | Push to Power Platform (Unmanaged)",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--path",
+        "bin/PowerPlatformSolutionManagementExtensions/Debug/PowerPlatformSolutionManagementExtensions.zip"
+      ],
+      "dependsOn": ["PowerPlatformSolutionManagementExtensions | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformSolutionManagementExtensions | Push and Publish to Power Platform (Unmanaged)",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--publish-changes",
+        "--path",
+        "bin/PowerPlatformSolutionManagementExtensions/Debug/PowerPlatformSolutionManagementExtensions.zip"
+      ],
+      "dependsOn": ["PowerPlatformSolutionManagementExtensions | Build solution (Unmanaged)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformSolutionManagementExtensions | Pull from Power Platform (Unmanaged)",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "sync",
+        "--async",
+        "--packagetype",
+        "Unmanaged",
+        "--solution-folder",
+        "powerplatform/PowerPlatformSolutionManagementExtensions/src"
+      ],
+      "dependsOn": [],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformSolutionManagementExtensions | Build solution (Managed)",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "--configuration:Release",
+        "powerplatform/PowerPlatformSolutionManagementExtensions"
+      ],
+      "dependsOn": [],
+      "problemMatcher": "$msCompile",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "PowerPlatformSolutionManagementExtensions | Push and Publish to Power Platform (Managed)",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "tool",
+        "run",
+        "pac",
+        "--",
+        "solution",
+        "import",
+        "--async",
+        "--activate-plugins",
+        "--publish-changes",
+        "--path",
+        "bin/PowerPlatformSolutionManagementExtensions/Release/PowerPlatformSolutionManagementExtensions.zip"
+      ],
+      "dependsOn": ["PowerPlatformSolutionManagementExtensions | Build solution (Managed)"],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
 
     // powerplatform-test/PowerPlatformRuntimeExtensionsTest
     {
