@@ -12,6 +12,11 @@
   <Folder Name="/.github/">
     <File Path=".github/dependabot.yml" />
   </Folder>
+  <Folder Name="/.submodules/" />
+  <Folder Name="/.submodules/fredrikhr/" />
+  <Folder Name="/.submodules/fredrikhr/powerplatform-sdk-extensions/">
+    <Project Path=".submodules/fredrikhr/powerplatform-sdk-extensions/libraries/FredrikHr.PowerPlatformSdkExtensions.ApiDiscovery/FredrikHr.PowerPlatformSdkExtensions.ApiDiscovery.csproj" />
+  </Folder>
   <Folder Name="/plugins/">
     <File Path="plugins/Directory.Build.props" />
     <File Path="plugins/Directory.Build.targets" />

@@ -101,7 +101,8 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         outputs[OutputParameterNames.OrganizationDetails] =
             GetOrganizationDetails(orgService, out Entity endpointsEntity);
         outputs[OutputParameterNames.DataverseEndpoints] = endpointsEntity;
-        outputs[OutputParameterNames.PowerPlatformApiDiscovery] = GetApiDiscovery(context, envInfo);
+        outputs[OutputParameterNames.PowerPlatformApiDiscovery] =
+            GetApiDiscovery(serviceProvider);
     }
 
     private static Entity GetEnvironmentInfo(IEnvironmentService envInfo)
@@ -176,21 +177,20 @@ public class RetrieveRuntimeInformationPlugin : IPlugin
         }
     }
 
-    private static Entity GetApiDiscovery(
-        IPluginExecutionContext7 context,
-        IEnvironmentService envInfo
-        )
+    private static Entity GetApiDiscovery(IServiceProvider serviceProvider)
     {
+        var context = serviceProvider.Get<IPluginExecutionContext6>();
         Entity entity = new();
-        var apiDiscovery = new PowerPlatformApiDiscovery(context, envInfo);
+        var apiDiscovery = PowerPlatformApiDiscovery
+            .FromPluginServiceProvider(serviceProvider);
         entity[nameof(apiDiscovery.TokenAudience)] = apiDiscovery.TokenAudience;
         entity[nameof(apiDiscovery.GlobalEndpoint)] = apiDiscovery.GlobalEndpoint;
         entity[nameof(apiDiscovery.GlobalUserContentEndpoint)] = apiDiscovery.GlobalUserContentEndpoint;
-        entity[nameof(apiDiscovery.TenantEndpoint)] = apiDiscovery.TenantEndpoint;
-        entity[nameof(apiDiscovery.TenantIslandClusterEndpoint)] = apiDiscovery.TenantIslandClusterEndpoint;
-        entity[nameof(apiDiscovery.EnvironmentEndpoint)] = apiDiscovery.EnvironmentEndpoint;
-        entity[nameof(apiDiscovery.EnvironmentUserContentEndpoint)] = apiDiscovery.EnvironmentUserContentEndpoint;
-        entity[nameof(apiDiscovery.OrganizationEndpoint)] = apiDiscovery.OrganizationEndpoint;
+        entity["TenantEndpoint"] = apiDiscovery.GetTenantEndpoint(context.TenantId);
+        entity["TenantIslandClusterEndpoint"] = apiDiscovery.GetTenantIslandClusterEndpoint(context.TenantId);
+        entity["EnvironmentEndpoint"] = apiDiscovery.GetEnvironmentEndpoint(context.EnvironmentId);
+        entity["EnvironmentUserContentEndpoint"] = apiDiscovery.GetEnvironmentUserContentEndpoint(context.EnvironmentId);
+        entity["OrganizationEndpoint"] = apiDiscovery.GetOrganizationEndpoint(context.OrganizationId);
         return entity;
     }
 }
